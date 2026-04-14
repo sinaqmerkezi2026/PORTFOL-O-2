@@ -53,7 +53,7 @@ export function Hero() {
             <Button size="lg" variant="outline" className="rounded-full group" asChild>
               <a href={cvLink} target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" />
-                Download CV
+                View CV
               </a>
             </Button>
           </div>
