@@ -49,6 +49,13 @@ export const portfolioData = {
   achievements: [
     {
       year: "2025",
+      title: "Metro Hackathon",
+      category: "Hackathons",
+      description: "Selected participant for the official Baku Metro hackathon focusing on innovative transit and infrastructure solutions.",
+      organization: "\"Bakı Metropoliteni\" QSC"
+    },
+    {
+      year: "2025",
       title: "National Inter-School Hackathon",
       category: "Hackathons",
       description: "Selected among top finalists from ~300,000 participants. Developed a mountain tourism platform with booking and coupon systems.",
