@@ -6,7 +6,7 @@ import { Trophy, Award, Star, Binary, Code2, Hammer } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 export function Achievements() {
-  const categories = ["All", "Programming", "Hackathons", "Making"];
+  const categories = ["All", "Hackathons", "Programming", "Making"];
 
   const getIcon = (category: string) => {
     switch (category) {
