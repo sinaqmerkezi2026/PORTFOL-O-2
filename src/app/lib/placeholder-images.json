@@ -38,6 +38,18 @@
       "imageHint": "cybersecurity certificate"
     },
     {
+      "id": "cert-vanderbilt",
+      "description": "OpenAI GPTs Certificate",
+      "imageUrl": "https://picsum.photos/seed/ai/800/600",
+      "imageHint": "artificial intelligence"
+    },
+    {
+      "id": "cert-microsoft",
+      "description": "Microsoft Cybersecurity Certificate",
+      "imageUrl": "https://picsum.photos/seed/ms/800/600",
+      "imageHint": "cybersecurity logo"
+    },
+    {
       "id": "avatar",
       "description": "Developer Avatar",
       "imageUrl": "https://picsum.photos/seed/avatar1/400/400",

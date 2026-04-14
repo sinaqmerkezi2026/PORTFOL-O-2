@@ -1,23 +1,66 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/app/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Eye } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Eye, Upload, FileUp, Sparkles } from 'lucide-react';
+import { useToast } from '@/hooks/use-toast';
 
 export function Certificates() {
-  const [selectedCert, setSelectedCert] = useState<typeof portfolioData.certificates[0] | null>(null);
+  const { toast } = useToast();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isUploading, setIsUploading] = useState(false);
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setIsUploading(true);
+      // Simulate upload process
+      setTimeout(() => {
+        setIsUploading(false);
+        toast({
+          title: "Certificate Uploaded",
+          description: `${file.name} has been received. Note: This is a temporary preview feature.`,
+        });
+      }, 1500);
+    }
+  };
 
   return (
     <section id="certificates" className="section-padding bg-secondary/30">
       <div className="container mx-auto">
-        <div className="text-center mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold">Certifications & <span className="gradient-text">Badges</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">Official recognitions of skill mastery and training program completions.</p>
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
+          <div className="space-y-4 max-w-2xl">
+            <h2 className="text-3xl md:text-5xl font-bold">Certifications & <span className="gradient-text">Badges</span></h2>
+            <p className="text-muted-foreground">Official recognitions of skill mastery and training program completions, including Coursera and Microsoft verified certifications.</p>
+          </div>
+          <div className="flex gap-4">
+            <input 
+              type="file" 
+              ref={fileInputRef} 
+              className="hidden" 
+              accept="application/pdf,image/*" 
+              onChange={handleFileChange}
+            />
+            <Button 
+              onClick={handleUploadClick} 
+              variant="outline" 
+              className="rounded-full border-primary/50 hover:bg-primary/10 group"
+              disabled={isUploading}
+            >
+              <Upload className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+              {isUploading ? "Uploading..." : "Upload New Cert"}
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -25,7 +68,7 @@ export function Certificates() {
             <Dialog key={cert.id}>
               <DialogTrigger asChild>
                 <Card className="glass-card cursor-pointer group hover:border-accent/50 transition-all overflow-hidden h-full">
-                  <div className="relative h-40 w-full">
+                  <div className="relative h-48 w-full">
                     <Image
                       src={cert.image}
                       alt={cert.title}
@@ -39,7 +82,9 @@ export function Certificates() {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="font-bold text-lg mb-2">{cert.title}</h3>
+                    <div className="flex items-start justify-between gap-2 mb-2">
+                      <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">{cert.title}</h3>
+                    </div>
                     <p className="text-sm text-muted-foreground line-clamp-2">{cert.description}</p>
                   </CardContent>
                 </Card>
@@ -49,8 +94,8 @@ export function Certificates() {
                   <DialogTitle>{cert.title}</DialogTitle>
                   <DialogDescription>{cert.description}</DialogDescription>
                 </DialogHeader>
-                <ScrollArea className="h-full w-full">
-                   <div className="relative aspect-[4/3] w-full">
+                <ScrollArea className="h-[60vh] w-full mt-4">
+                   <div className="relative aspect-[4/3] w-full bg-secondary/20 rounded-xl overflow-hidden">
                      <Image
                         src={cert.image}
                         alt={cert.title}
@@ -59,9 +104,24 @@ export function Certificates() {
                       />
                    </div>
                 </ScrollArea>
+                <div className="flex justify-end pt-4">
+                   <Button variant="secondary" size="sm">Download PDF</Button>
+                </div>
               </DialogContent>
             </Dialog>
           ))}
+
+          {/* Empty state / placeholder for new uploads */}
+          <Card 
+            className="border-dashed border-2 bg-transparent hover:bg-primary/5 cursor-pointer transition-colors flex flex-col items-center justify-center p-12 text-center"
+            onClick={handleUploadClick}
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+              <FileUp className="w-8 h-8" />
+            </div>
+            <h4 className="font-bold text-lg mb-1">Add Another</h4>
+            <p className="text-sm text-muted-foreground">Drag and drop your certificate PDF here</p>
+          </Card>
         </div>
       </div>
     </section>

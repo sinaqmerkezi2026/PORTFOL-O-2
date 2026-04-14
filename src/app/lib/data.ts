@@ -91,6 +91,18 @@ export const portfolioData = {
   ],
   certificates: [
     {
+      id: "c4",
+      title: "OpenAI GPTs: Creating Your Own Custom AI Assistants",
+      description: "Certification from Vanderbilt University focused on building specialized AI agents and GPT models.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-vanderbilt')?.imageUrl || ""
+    },
+    {
+      id: "c5",
+      title: "Cybersecurity and Privacy",
+      description: "Microsoft certification covering core security principles and privacy protection strategies.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-microsoft')?.imageUrl || ""
+    },
+    {
       id: "c1",
       title: "Deneyap Technology Laboratories",
       description: "3-year scholarship program completion in high-tech fields.",
