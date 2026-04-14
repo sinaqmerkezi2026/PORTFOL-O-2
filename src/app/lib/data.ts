@@ -5,7 +5,7 @@ export const portfolioData = {
   personalInfo: {
     name: "NİCAT HUSEYNLİ",
     title: "S T U D E N T",
-    profession: ["Student Developer", "C++ Programmer", "Competition Participant"],
+    profession: ["Founder of Sınaq Mərkəzi", "Student Developer", "C++ Programmer", "Competition Participant"],
     aboutMe: "I am an active volunteer with strong teamwork and communication skills, experienced in dynamic environments. I have a background in programming and cybersecurity, along with achievements such as being a 3-time STEAM competition winner. I am responsible, adaptable, and always eager to learn and contribute effectively.",
     phone: "+994-51-426-26-76",
     email: "huseynlinicat2010@gmail.com",
@@ -81,7 +81,7 @@ export const portfolioData = {
     {
       id: "2",
       title: "Sınaq Mərkəzi AI",
-      description: "An AI-powered exam platform for students to practice and improve their scores with personalized feedback.",
+      description: "Founder of “Sınaq Mərkəzi” — An AI-powered exam platform for students to practice and improve their scores with personalized feedback.",
       image: PlaceHolderImages.find(img => img.id === 'hero-bg')?.imageUrl || "",
       github: "https://github.com",
       tags: ["AI", "Next.js", "Education"]
