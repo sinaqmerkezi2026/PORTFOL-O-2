@@ -10,14 +10,13 @@ import { Button } from '@/components/ui/button';
 import { Github, ExternalLink, Sparkles, Upload, FileUp, Loader2, ArrowRight } from 'lucide-react';
 import { summarizeProjectDescription } from '@/ai/flows/summarize-project-description';
 import { useToast } from '@/hooks/use-toast';
-import { useCollection, useFirestore, useUser, errorEmitter } from '@/firebase';
+import { useCollection, useFirestore, errorEmitter } from '@/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy } from 'firebase/firestore';
 import { FirestorePermissionError } from '@/firebase/errors';
 
 export function Projects() {
   const { toast } = useToast();
   const db = useFirestore();
-  const { user } = useUser();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
   const [summaries, setSummaries] = useState<Record<string, string>>({});
@@ -39,14 +38,6 @@ export function Projects() {
   }, [dbProjects]);
 
   const handleUploadClick = () => {
-    if (!user) {
-      toast({
-        variant: "destructive",
-        title: "Authentication Required",
-        description: "Please login to add new projects to the database.",
-      });
-      return;
-    }
     fileInputRef.current?.click();
   };
 
@@ -60,7 +51,7 @@ export function Projects() {
         const dataUrl = reader.result as string;
         const newProject = {
           title: "New Project: " + file.name.split('.')[0],
-          description: "This project was added dynamically via the dashboard. It showcases my latest work and technical skills.",
+          description: "This project was added dynamically. It showcases my latest work and technical skills.",
           image: dataUrl,
           github: "https://github.com",
           tags: ["New", "Dynamic"],

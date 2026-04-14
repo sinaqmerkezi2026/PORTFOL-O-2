@@ -10,14 +10,13 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
 import { Eye, Upload, FileUp, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { useCollection, useFirestore, useUser, errorEmitter } from '@/firebase';
+import { useCollection, useFirestore, errorEmitter } from '@/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy } from 'firebase/firestore';
 import { FirestorePermissionError } from '@/firebase/errors';
 
 export function Certificates() {
   const { toast } = useToast();
   const db = useFirestore();
-  const { user } = useUser();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
 
@@ -39,14 +38,6 @@ export function Certificates() {
   }, [dbCerts]);
 
   const handleUploadClick = () => {
-    if (!user) {
-      toast({
-        variant: "destructive",
-        title: "Authentication Required",
-        description: "Please login to upload certificates.",
-      });
-      return;
-    }
     fileInputRef.current?.click();
   };
 
