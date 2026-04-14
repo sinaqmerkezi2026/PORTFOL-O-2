@@ -7,7 +7,7 @@ import { portfolioData } from '@/app/lib/data';
 import { ArrowRight, Code, Trophy, Shield, FileText } from 'lucide-react';
 
 export function Hero() {
-  const { name, title, profession } = portfolioData.personalInfo;
+  const { name, title, profession, cvLink } = portfolioData.personalInfo;
   const [professionIndex, setProfessionIndex] = useState(0);
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export function Hero() {
               </a>
             </Button>
             <Button size="lg" variant="outline" className="rounded-full group" asChild>
-              <a href="#cv">
+              <a href={cvLink} target="_blank" rel="noopener noreferrer">
                 <FileText className="mr-2 h-4 w-4" />
                 Download CV
               </a>

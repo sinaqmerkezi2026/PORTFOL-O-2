@@ -7,7 +7,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { FileText, Download, Linkedin, Mail, ExternalLink } from 'lucide-react';
 
 export function CVSection() {
-  const { name, email, linkedin, aboutMe, location } = portfolioData.personalInfo;
+  const { name, email, linkedin, aboutMe, location, cvLink } = portfolioData.personalInfo;
 
   return (
     <section id="cv" className="section-padding bg-secondary/10">
@@ -32,9 +32,11 @@ export function CVSection() {
                       <p className="text-sm text-muted-foreground">{location}</p>
                     </div>
                     <div className="w-full space-y-3 pt-4">
-                      <Button className="w-full rounded-xl gap-2" size="lg">
-                        <Download className="w-4 h-4" />
-                        Download PDF
+                      <Button className="w-full rounded-xl gap-2" size="lg" asChild>
+                        <a href={cvLink} target="_blank" rel="noopener noreferrer">
+                          <Download className="w-4 h-4" />
+                          Download PDF
+                        </a>
                       </Button>
                       <Button variant="outline" className="w-full rounded-xl gap-2" asChild>
                         <a href={linkedin} target="_blank" rel="noopener noreferrer">

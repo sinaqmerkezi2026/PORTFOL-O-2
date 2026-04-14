@@ -3,7 +3,7 @@ import { PlaceHolderImages } from './placeholder-images';
 
 export const portfolioData = {
   personalInfo: {
-    name: "NİCAT HUSEYNLİ",
+    name: "NİCAT HUSEYNLI",
     title: "S T U D E N T",
     profession: ["Founder of Sınaq Mərkəzi", "Student Developer", "C++ Programmer", "Competition Participant"],
     aboutMe: "I am an active volunteer with strong teamwork and communication skills, experienced in dynamic environments. I have a background in programming and cybersecurity, along with achievements such as being a 3-time STEAM competition winner. I am responsible, adaptable, and always eager to learn and contribute effectively.",
@@ -11,6 +11,7 @@ export const portfolioData = {
     email: "huseynlinicat2010@gmail.com",
     linkedin: "https://www.linkedin.com/in/nicat-huseynli-12022b283/",
     instagram: "https://instagram.com/nicathuseynli",
+    cvLink: "https://drive.google.com/file/d/1EuWEgXM0d0iBd2wjq3d3X7XFojEeE5ZF/view?usp=sharing",
     education: "Secondary School No. 204",
     location: "Baku, Azerbaijan"
   },
@@ -74,7 +75,7 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation in satellite prototyping.",
-      image: PlaceHolderImages.find(img => img.id === 'project-cubesat-saf2025')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGOzYRzy8gW0A/feedshare-shrink_1280/B4EZqhjOQLKYAs-/0/1763646959976?e=1777507200&v=beta&t=_b-ZWI2quDf0yOqn57Sr_I8i3FczKNaPEJxRjoMCfSo",
       github: "https://github.com",
       tags: ["C++", "Aerospace", "IoT"]
     },
@@ -82,7 +83,7 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category at the International Steam Azerbaijan Festival.",
-      image: PlaceHolderImages.find(img => img.id === 'project-boat-saf2023')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E2DAQEhRLhr_9R8qw/profile-treasury-image-shrink_1280_1280/B4EZuF.j3qIUAQ-/0/1767479334026?e=1776769200&v=beta&t=Do79bLwQPR_mQPeWcHedyHhspnxmnJMOrccMwdUURvc",
       github: "https://github.com",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
@@ -90,7 +91,7 @@ export const portfolioData = {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: PlaceHolderImages.find(img => img.id === 'project-drone-saf2022')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
       github: "https://github.com",
       tags: ["Robotics", "Engineering", "C++"]
     },
