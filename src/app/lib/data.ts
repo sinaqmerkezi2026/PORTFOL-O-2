@@ -34,6 +34,12 @@ export const portfolioData = {
   achievements: [
     {
       year: "2025",
+      title: "2nd Turkic Integration Olympiad (TIO)",
+      description: "Silver Medal winner. Integrated competition covering mathematics, computer science, chemistry, biology, history, physics, and geography among Turkic states.",
+      organization: "Hədəf Kursları"
+    },
+    {
+      year: "2025",
       title: "National Inter-School Hackathon",
       description: "Selected among 300 finalists from ~300,000 participants. Developed a web platform for mountain tourism with a booking and coupon system.",
       organization: "Ministry of Science and Education Republic of Azerbaijan"
@@ -90,6 +96,12 @@ export const portfolioData = {
     }
   ],
   certificates: [
+    {
+      id: "c6",
+      title: "Cyber Summer School - 2023",
+      description: "International summer school focused on cybersecurity, organized by ACOA and the State Security Service.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-cybersummer')?.imageUrl || ""
+    },
     {
       id: "c4",
       title: "OpenAI GPTs: Creating Your Own Custom AI Assistants",

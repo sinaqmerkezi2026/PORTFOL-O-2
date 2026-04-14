@@ -50,6 +50,18 @@
       "imageHint": "cybersecurity logo"
     },
     {
+      "id": "cert-tio",
+      "description": "Turkic Integration Olympiad Silver Medal",
+      "imageUrl": "https://picsum.photos/seed/medal/800/600",
+      "imageHint": "silver medal"
+    },
+    {
+      "id": "cert-cybersummer",
+      "description": "Cyber Summer School Certificate",
+      "imageUrl": "https://picsum.photos/seed/summer/800/600",
+      "imageHint": "summer school"
+    },
+    {
       "id": "avatar",
       "description": "Developer Avatar",
       "imageUrl": "https://picsum.photos/seed/avatar1/400/400",
