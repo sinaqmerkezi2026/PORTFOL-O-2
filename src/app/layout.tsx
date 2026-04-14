@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: 'Nicat Huseynli | Portfolio',
   description: 'Professional portfolio of Nicat Huseynli, a dedicated student developer, C++ programmer, and competition winner.',
   icons: {
-    icon: 'data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==',
+    icon: 'data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>',
   },
 };
 
