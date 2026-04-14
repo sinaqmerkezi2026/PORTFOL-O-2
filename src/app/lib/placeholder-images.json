@@ -32,46 +32,40 @@
       "imageHint": "technology display"
     },
     {
-      "id": "project-mountain",
-      "description": "Mountain Tourism Platform",
-      "imageUrl": "https://picsum.photos/seed/mountain/600/400",
-      "imageHint": "mountain website"
-    },
-    {
-      "id": "cert-cpp",
-      "description": "C++ Programming Certificate",
-      "imageUrl": "https://picsum.photos/seed/cert1/800/600",
-      "imageHint": "certificate award"
-    },
-    {
-      "id": "cert-cyber",
-      "description": "Cybersecurity Training Certificate",
-      "imageUrl": "https://picsum.photos/seed/cert2/800/600",
-      "imageHint": "cybersecurity certificate"
-    },
-    {
-      "id": "cert-vanderbilt",
-      "description": "OpenAI GPTs Certificate",
-      "imageUrl": "https://picsum.photos/seed/ai/800/600",
-      "imageHint": "artificial intelligence"
-    },
-    {
-      "id": "cert-microsoft",
-      "description": "Microsoft Cybersecurity Certificate",
-      "imageUrl": "https://picsum.photos/seed/ms/800/600",
-      "imageHint": "cybersecurity logo"
+      "id": "cert-deneyap",
+      "description": "Deneyap Technology Laboratories Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEftN5uICOKyw/feedshare-shrink_1280/B4EZo5rEUkKgAs-/0/1761904184340?e=1777507200&v=beta&t=ZYlyBmx-7XsUvFumYJhzrpbGbizdH1028_IXw686ET8",
+      "imageHint": "certificate deneyap"
     },
     {
       "id": "cert-tio",
-      "description": "Turkic Integration Olympiad Silver Medal",
-      "imageUrl": "https://picsum.photos/seed/medal/800/600",
-      "imageHint": "silver medal"
+      "description": "Türk Integration Olympiad Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_2048_1536/B4EZb7NQvuGcAo-/0/1747971285874?e=1777507200&v=beta&t=Z5n63_iFq5NzZCT-orBVHCEmaaIIH9N_fi5JlYfVdrU",
+      "imageHint": "olympiad medal"
+    },
+    {
+      "id": "cert-volunteer",
+      "description": "Scholar Volunteer Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQFK8hahvK4XQw/feedshare-shrink_2048_1536/B4EZZ9V9.MHMAo-/0/1745859638420?e=1777507200&v=beta&t=i6VQQcpF2mWYyJdk-2LddOL56e3Gixq0dySd3JR3bl8",
+      "imageHint": "volunteer award"
+    },
+    {
+      "id": "cert-technest",
+      "description": "Technest Cybersecurity Program Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D5622AQEQPzHGw6ysHQ/feedshare-shrink_800/feedshare-shrink_800/0/1729621553221?e=1777507200&v=beta&t=Gi-trhawojBf5NZVCfRZWvQbt5h0BQhQ6ay7uPvxIPo",
+      "imageHint": "cybersecurity technest"
+    },
+    {
+      "id": "cert-azercell",
+      "description": "Azercell Cup Programming Olympiad Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc",
+      "imageHint": "programming award"
     },
     {
       "id": "cert-cybersummer",
-      "description": "Cyber Summer School Certificate",
-      "imageUrl": "https://picsum.photos/seed/summer/800/600",
-      "imageHint": "summer school"
+      "description": "Cyber Summer School 2023 Certificate",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEsjuY6ZvN4_A/feedshare-shrink_800/feedshare-shrink_800/0/1716203028002?e=1777507200&v=beta&t=X0-vjk5SgsiBHjUHpcThRyS6A_11sn_y7lDFTguthg8",
+      "imageHint": "cybersecurity summer school"
     },
     {
       "id": "avatar",

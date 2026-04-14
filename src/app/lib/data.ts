@@ -75,7 +75,7 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation in satellite prototyping.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGOzYRzy8gW0A/feedshare-shrink_1280/B4EZqhjOQLKYAs-/0/1763646959976?e=1777507200&v=beta&t=_b-ZWI2quDf0yOqn57Sr_I8i3FczKNaPEJxRjoMCfSo",
+      image: PlaceHolderImages.find(img => img.id === 'project-cubesat-saf2025')?.imageUrl || "",
       github: "https://github.com",
       tags: ["C++", "Aerospace", "IoT"]
     },
@@ -83,7 +83,7 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category at the International Steam Azerbaijan Festival.",
-      image: "https://media.licdn.com/dms/image/v2/D4E2DAQEhRLhr_9R8qw/profile-treasury-image-shrink_1280_1280/B4EZuF.j3qIUAQ-/0/1767479334026?e=1776769200&v=beta&t=Do79bLwQPR_mQPeWcHedyHhspnxmnJMOrccMwdUURvc",
+      image: PlaceHolderImages.find(img => img.id === 'project-boat-saf2023')?.imageUrl || "",
       github: "https://github.com",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
@@ -91,9 +91,17 @@ export const portfolioData = {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
+      image: PlaceHolderImages.find(img => img.id === 'project-drone-saf2022')?.imageUrl || "",
       github: "https://github.com",
       tags: ["Robotics", "Engineering", "C++"]
+    },
+    {
+      id: "p-saf2025-additional",
+      title: "SAF 2025 Display",
+      description: "Additional technical display and prototype presentation during the SAF 2025 festival.",
+      image: PlaceHolderImages.find(img => img.id === 'project-saf2025-additional')?.imageUrl || "",
+      github: "https://github.com",
+      tags: ["Hardware", "Steam"]
     },
     {
       id: "p-snaq",
@@ -106,34 +114,40 @@ export const portfolioData = {
   ],
   certificates: [
     {
+      id: "c1",
+      title: "Deneyap Technology Laboratories",
+      description: "3-year scholarship program completion in high-tech fields including robotics, coding, and design.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-deneyap')?.imageUrl || ""
+    },
+    {
+      id: "c2",
+      title: "2nd Turkic Integration Olympiad (TIO)",
+      description: "Silver medal recognition for excellence in interdisciplinary sciences across Turkic states.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-tio')?.imageUrl || ""
+    },
+    {
+      id: "c3",
+      title: "Spring Camp for Student Volunteers",
+      description: "Leadership and team-building training program, resulting in a first-place competition finish.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-volunteer')?.imageUrl || ""
+    },
+    {
+      id: "c4",
+      title: "Technest Cybersecurity Program",
+      description: "Intensive cybersecurity training provided by Techspace Azerbaijan under the Technest scholarship.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-technest')?.imageUrl || ""
+    },
+    {
+      id: "c5",
+      title: "AzercellCup Programming Olympiad",
+      description: "National recognition for C++ programming excellence, organized by Azercell.",
+      image: PlaceHolderImages.find(img => img.id === 'cert-azercell')?.imageUrl || ""
+    },
+    {
       id: "c6",
       title: "Cyber Summer School - 2023",
       description: "International summer school focused on cybersecurity, organized by ACOA and the State Security Service.",
       image: PlaceHolderImages.find(img => img.id === 'cert-cybersummer')?.imageUrl || ""
-    },
-    {
-      id: "c4",
-      title: "OpenAI GPTs: Creating Your Own Custom AI Assistants",
-      description: "Certification from Vanderbilt University focused on building specialized AI agents and GPT models.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-vanderbilt')?.imageUrl || ""
-    },
-    {
-      id: "c5",
-      title: "Cybersecurity and Privacy",
-      description: "Microsoft certification covering core security principles and privacy protection strategies.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-microsoft')?.imageUrl || ""
-    },
-    {
-      id: "c1",
-      title: "Deneyap Technology Laboratories",
-      description: "3-year scholarship program completion in high-tech fields.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-cpp')?.imageUrl || ""
-    },
-    {
-      id: "c2",
-      title: "Technest Cybersecurity Program",
-      description: "Intensive training program by Techspace Azerbaijan.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-cyber')?.imageUrl || ""
     }
   ],
   educationDetails: [
