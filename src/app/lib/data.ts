@@ -10,7 +10,7 @@ export const portfolioData = {
     phone: "+994-51-426-26-76",
     email: "huseynlinicat2010@gmail.com",
     linkedin: "https://www.linkedin.com/in/nicat-huseynli-12022b283/",
-    instagram: "https://instagram.com/nicathuseynli",
+    instagram: "https://www.instagram.com/nijathuseynli",
     cvLink: "https://drive.google.com/file/d/1EuWEgXM0d0iBd2wjq3d3X7XFojEeE5ZF/view?usp=sharing",
     education: "Secondary School No. 204",
     location: "Baku, Azerbaijan"
