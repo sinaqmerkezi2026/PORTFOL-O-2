@@ -2,18 +2,19 @@
 "use client";
 
 import { portfolioData } from '@/app/lib/data';
-import { Trophy, Award, Star, Binary, Code2, Hammer } from 'lucide-react';
+import { Trophy, Award, Star, Binary, Code2, Hammer, School } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Image from 'next/image';
 
 export function Achievements() {
-  const categories = ["All", "Hackathons", "Programming", "Making"];
+  const categories = ["All", "Hackathons", "Programming", "Making", "Academic"];
 
   const getIcon = (category: string) => {
     switch (category) {
       case "Programming": return <Binary className="w-8 h-8 md:w-10 md:h-10" />;
       case "Hackathons": return <Code2 className="w-8 h-8 md:w-10 md:h-10" />;
       case "Making": return <Hammer className="w-8 h-8 md:w-10 md:h-10" />;
+      case "Academic": return <School className="w-8 h-8 md:w-10 md:h-10" />;
       default: return <Trophy className="w-8 h-8 md:w-10 md:h-10" />;
     }
   };
@@ -28,7 +29,7 @@ export function Achievements() {
 
         <Tabs defaultValue="All" className="w-full">
           <div className="flex justify-center mb-12">
-            <TabsList className="bg-secondary/50 p-1 rounded-full h-auto">
+            <TabsList className="bg-secondary/50 p-1 rounded-full h-auto flex-wrap justify-center">
               {categories.map(cat => (
                 <TabsTrigger key={cat} value={cat} className="rounded-full px-6 py-2 font-bold data-[state=active]:bg-primary data-[state=active]:text-primary-foreground">
                   {cat}

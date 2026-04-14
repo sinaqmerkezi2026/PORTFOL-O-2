@@ -48,6 +48,14 @@ export const portfolioData = {
   ],
   achievements: [
     {
+      year: "2025",
+      title: "Mathematicians Without Borders",
+      category: "Academic",
+      description: "Participated in the specialized mathematics classes held by ADA University (May 19-21-23, 2025), focusing on advanced analytical problem-solving.",
+      organization: "ADA University",
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/ADA.png"
+    },
+    {
       year: "2026",
       title: "Metro Hackathon",
       category: "Hackathons",
