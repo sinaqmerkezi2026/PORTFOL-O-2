@@ -48,10 +48,10 @@ export const portfolioData = {
   ],
   achievements: [
     {
-      year: "2025",
+      year: "2026",
       title: "Metro Hackathon",
       category: "Hackathons",
-      description: "Selected participant for the official Baku Metro hackathon focusing on innovative transit and infrastructure solutions.",
+      description: "Registered participant for the upcoming official Baku Metro hackathon focusing on innovative transit and infrastructure solutions (May 1-3, 2026).",
       organization: "\"Bakı Metropoliteni\" QSC"
     },
     {
@@ -129,7 +129,7 @@ export const portfolioData = {
       id: "p-snaq",
       title: "Sınaq Mərkəzi",
       role: "Founder & Lead Developer",
-      description: "An AI-powered exam platform for students to practice and improve their scores with personalized feedback. Revolutionizing exam preparation.",
+      description: "An exam platform for students to practice and improve their scores with personalized feedback. Revolutionizing exam preparation.",
       image: "https://www.image2url.com/r2/default/images/1776165304228-51ae6fdf-a65a-46f2-91fa-2cde84248ed2.png",
       github: "https://github.com",
       liveUrl: "https://sinaqmerkezi.vercel.app/",
