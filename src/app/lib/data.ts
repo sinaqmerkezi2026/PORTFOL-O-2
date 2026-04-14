@@ -32,6 +32,20 @@ export const portfolioData = {
       { name: "Turkish", level: "B2" }
     ]
   },
+  educationDetails: [
+    {
+      title: "Deneyap Technology Laboratories",
+      meta: "3-year scholarship program (Scholarship Program 100%)"
+    },
+    {
+      title: "Techspace Azerbaijan",
+      meta: "Cybersecurity Training (Technest Scholarship Program 100%)"
+    },
+    {
+      title: "Code&More",
+      meta: "Electronics Training Program (Technest Scholarship Program 100%)"
+    }
+  ],
   achievements: [
     {
       year: "2025",
@@ -46,28 +60,10 @@ export const portfolioData = {
       organization: "Ministry of Science and Education Republic of Azerbaijan"
     },
     {
-      year: "2025",
-      title: "SAF 2025 — CubeSat Category",
-      description: "2nd place. Worked on a space systems engineering project developing a CubeSat prototype.",
-      organization: "International Steam Azerbaijan Festival (SAF)"
-    },
-    {
       year: "2023",
       title: "AzercellCup Programming Olympiad",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education"
-    },
-    {
-      year: "2023",
-      title: "SAF 2023 — Boat Racing Category",
-      description: "3rd place. Built a 3D-printed surface watercraft project with custom electronics.",
-      organization: "International Steam Azerbaijan Festival (SAF)"
-    },
-    {
-      year: "2022",
-      title: "SAF 2022 — Edu Drone Category",
-      description: "3rd place. Developed a drone-based project focused on electronics and engineering.",
-      organization: "International Steam Azerbaijan Festival (SAF)"
     }
   ],
   projects: [
@@ -94,22 +90,17 @@ export const portfolioData = {
       image: PlaceHolderImages.find(img => img.id === 'project-drone-saf2022')?.imageUrl || "",
       github: "https://github.com",
       tags: ["Robotics", "Engineering", "C++"]
-    },
-    {
-      id: "p-saf2025-additional",
-      title: "SAF 2025 Display",
-      description: "Additional technical display and prototype presentation during the SAF 2025 festival.",
-      image: PlaceHolderImages.find(img => img.id === 'project-saf2025-additional')?.imageUrl || "",
-      github: "https://github.com",
-      tags: ["Hardware", "Steam"]
-    },
+    }
+  ],
+  founderProjects: [
     {
       id: "p-snaq",
       title: "Sınaq Mərkəzi AI",
-      description: "Founder of “Sınaq Mərkəzi” — An AI-powered exam platform for students to practice and improve their scores with personalized feedback.",
+      role: "Founder & Lead Developer",
+      description: "An AI-powered exam platform for students to practice and improve their scores with personalized feedback. Revolutionizing exam preparation through generative AI analysis and adaptive testing.",
       image: PlaceHolderImages.find(img => img.id === 'hero-bg')?.imageUrl || "",
       github: "https://github.com",
-      tags: ["AI", "Next.js", "Education"]
+      tags: ["AI", "Next.js", "Education", "Founder"]
     }
   ],
   certificates: [
@@ -148,20 +139,6 @@ export const portfolioData = {
       title: "Cyber Summer School - 2023",
       description: "International summer school focused on cybersecurity, organized by ACOA and the State Security Service.",
       image: PlaceHolderImages.find(img => img.id === 'cert-cybersummer')?.imageUrl || ""
-    }
-  ],
-  educationDetails: [
-    {
-      title: "Deneyap Technology Laboratories",
-      meta: "3-year scholarship program (100%)"
-    },
-    {
-      title: "Techspace Azerbaijan",
-      meta: "Cybersecurity Training (Technest Scholarship 100%)"
-    },
-    {
-      title: "Code&More",
-      meta: "Electronics Training Program (Technest Scholarship 100%)"
     }
   ],
   volunteering: [

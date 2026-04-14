@@ -1,10 +1,10 @@
 
 import { portfolioData } from '@/app/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
-import { MapPin, Mail, Phone, ExternalLink } from 'lucide-react';
+import { MapPin, Mail, Phone, GraduationCap, Users } from 'lucide-react';
 
 export function About() {
-  const { aboutMe, location, email, phone, linkedin } = portfolioData.personalInfo;
+  const { aboutMe, location, email, phone } = portfolioData.personalInfo;
 
   return (
     <section id="about" className="section-padding bg-secondary/30">
@@ -49,42 +49,52 @@ export function About() {
           </div>
 
           <div className="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-6">
-             <Card className="glass-card">
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-primary">Education</h3>
-                  <p className="text-sm leading-relaxed">
-                    {portfolioData.personalInfo.education}
-                  </p>
-                  <div className="space-y-3 pt-2">
+             <Card className="glass-card border-primary/20 bg-primary/5">
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <GraduationCap className="w-6 h-6 text-primary" />
+                    <h3 className="text-2xl font-black tracking-tight">Education & Scholarships</h3>
+                  </div>
+                  <div className="space-y-6">
                     {portfolioData.educationDetails.map((edu, idx) => (
-                      <div key={idx} className="border-l-2 border-primary/30 pl-4 py-1">
-                        <p className="text-sm font-semibold">{edu.title}</p>
-                        <p className="text-xs text-muted-foreground">{edu.meta}</p>
+                      <div key={idx} className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:rounded-full before:bg-primary">
+                        <p className="text-lg font-bold leading-tight mb-1">{edu.title}</p>
+                        <p className="text-sm text-muted-foreground font-medium italic">{edu.meta}</p>
                       </div>
                     ))}
+                  </div>
+                  <div className="pt-6 border-t border-primary/10">
+                    <p className="text-xs font-bold text-muted-foreground uppercase mb-2">Schooling</p>
+                    <p className="font-bold text-primary">{portfolioData.personalInfo.education}</p>
                   </div>
                 </CardContent>
              </Card>
 
              <Card className="glass-card">
-                <CardContent className="p-6 space-y-4">
-                  <h3 className="text-xl font-bold text-accent">Volunteering</h3>
+                <CardContent className="p-8 space-y-6">
+                  <div className="flex items-center gap-3">
+                    <Users className="w-6 h-6 text-accent" />
+                    <h3 className="text-2xl font-black tracking-tight">Community</h3>
+                  </div>
                   {portfolioData.volunteering.map((vol, idx) => (
-                    <div key={idx} className="space-y-2">
+                    <div key={idx} className="space-y-3">
                       <div className="flex justify-between items-start">
-                        <p className="text-sm font-bold">{vol.title}</p>
-                        <span className="text-xs bg-accent/20 text-accent px-2 py-0.5 rounded">{vol.year}</span>
+                        <p className="text-lg font-bold">{vol.title}</p>
+                        <span className="text-xs bg-accent/20 text-accent px-3 py-1 rounded-full font-bold">{vol.year}</span>
                       </div>
-                      <p className="text-xs text-muted-foreground">{vol.organization}</p>
-                      <p className="text-xs leading-relaxed italic">{vol.description}</p>
+                      <p className="text-sm text-primary font-semibold">{vol.organization}</p>
+                      <p className="text-sm leading-relaxed text-muted-foreground">{vol.description}</p>
                     </div>
                   ))}
-                  <div className="pt-4 border-t">
-                    <h3 className="text-lg font-bold text-primary mb-2">Tests</h3>
+                  <div className="pt-6 border-t">
+                    <h4 className="text-sm font-black text-muted-foreground uppercase mb-4 tracking-widest">Academic Records</h4>
                     {portfolioData.testScores.map((score, idx) => (
-                      <div key={idx} className="flex justify-between items-center bg-secondary p-3 rounded-lg">
-                        <span className="text-xs font-medium">{score.exam}</span>
-                        <span className="text-sm font-black text-primary">{score.score}</span>
+                      <div key={idx} className="flex justify-between items-center bg-secondary p-4 rounded-xl border border-border">
+                        <span className="text-sm font-bold">{score.exam}</span>
+                        <div className="text-right">
+                          <span className="text-xl font-black text-primary">{score.score}</span>
+                          <p className="text-[10px] text-muted-foreground uppercase font-bold">{score.date}</p>
+                        </div>
                       </div>
                     ))}
                   </div>
