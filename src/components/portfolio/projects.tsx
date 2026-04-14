@@ -1,18 +1,41 @@
 
 "use client";
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/app/lib/data';
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Sparkles } from 'lucide-react';
+import { Github, ExternalLink, Sparkles, Upload, FileUp } from 'lucide-react';
 import { summarizeProjectDescription } from '@/ai/flows/summarize-project-description';
+import { useToast } from '@/hooks/use-toast';
 
 export function Projects() {
+  const { toast } = useToast();
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const [isUploading, setIsUploading] = useState(false);
   const [summaries, setSummaries] = useState<Record<string, string>>({});
   const [loading, setLoading] = useState<Record<string, boolean>>({});
+
+  const handleUploadClick = () => {
+    fileInputRef.current?.click();
+  };
+
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      setIsUploading(true);
+      // Simulate upload process
+      setTimeout(() => {
+        setIsUploading(false);
+        toast({
+          title: "Project Image Added",
+          description: `${file.name} has been received for processing.`,
+        });
+      }, 1500);
+    }
+  };
 
   const handleSummarize = async (projectId: string, description: string) => {
     setLoading(prev => ({ ...prev, [projectId]: true }));
@@ -34,12 +57,30 @@ export function Projects() {
             <h2 className="text-3xl md:text-5xl font-bold">Featured <span className="gradient-text">Projects</span></h2>
             <p className="text-muted-foreground">A collection of technical solutions and creative works from competitions and independent research.</p>
           </div>
-          <Button variant="outline" size="sm" className="rounded-full" asChild>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" />
-              View GitHub
-            </a>
-          </Button>
+          <div className="flex gap-4">
+            <input 
+              type="file" 
+              ref={fileInputRef} 
+              className="hidden" 
+              accept="image/*" 
+              onChange={handleFileChange}
+            />
+            <Button 
+              onClick={handleUploadClick} 
+              variant="outline" 
+              className="rounded-full border-primary/50 hover:bg-primary/10 group"
+              disabled={isUploading}
+            >
+              <Upload className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
+              {isUploading ? "Uploading..." : "Add Project"}
+            </Button>
+            <Button variant="outline" size="sm" className="rounded-full h-10 px-4" asChild>
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                <Github className="mr-2 h-4 w-4" />
+                View GitHub
+              </a>
+            </Button>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -57,7 +98,7 @@ export function Projects() {
                   <Button size="icon" variant="secondary" className="rounded-full">
                     <Github className="h-5 w-5" />
                   </Button>
-                  <Button size="icon" variant="primary" className="rounded-full">
+                  <Button size="icon" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
                     <ExternalLink className="h-5 w-5" />
                   </Button>
                 </div>
@@ -99,6 +140,18 @@ export function Projects() {
               </CardFooter>
             </Card>
           ))}
+
+          {/* New Project Upload Placeholder */}
+          <Card 
+            className="border-dashed border-2 bg-transparent hover:bg-primary/5 cursor-pointer transition-colors flex flex-col items-center justify-center p-12 text-center h-full min-h-[400px] group"
+            onClick={handleUploadClick}
+          >
+            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform duration-300">
+              <FileUp className="w-8 h-8" />
+            </div>
+            <h4 className="font-bold text-lg mb-1">Add Project</h4>
+            <p className="text-sm text-muted-foreground">Upload a photo of your latest work</p>
+          </Card>
         </div>
       </div>
     </section>
