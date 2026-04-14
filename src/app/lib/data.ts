@@ -89,21 +89,24 @@ export const portfolioData = {
       title: "SAF 2025 — CubeSat Category",
       category: "Making",
       description: "2nd place winner for technical innovation in satellite prototyping.",
-      organization: "International Steam Azerbaijan Festival"
+      organization: "International Steam Azerbaijan Festival",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no"
     },
     {
       year: "2023",
       title: "SAF 2023 — Boat Racing",
       category: "Making",
       description: "3rd place winner. Built a custom 3D-printed surface watercraft.",
-      organization: "International Steam Azerbaijan Festival"
+      organization: "International Steam Azerbaijan Festival",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716203526194?e=1777507200&v=beta&t=wnhk58DI6pCYuWKuhSoNcW3sbB-mFu1O1ehD1YYFwCU"
     },
     {
       year: "2022",
       title: "SAF 2022 — Edu Drone",
       category: "Making",
       description: "3rd place winner. Developed an educational drone focused on flight control electronics.",
-      organization: "International Steam Azerbaijan Festival"
+      organization: "International Steam Azerbaijan Festival",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ"
     }
   ],
   projects: [
@@ -111,7 +114,7 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGOzYRzy8gW0A/feedshare-shrink_1280/B4EZqhjOQLKYAs-/0/1763646959976?e=1777507200&v=beta&t=_b-ZWI2quDf0yOqn57Sr_I8i3FczKNaPEJxRjoMCfSo",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no",
       github: "https://github.com",
       tags: ["C++", "Aerospace", "IoT"]
     },
@@ -119,7 +122,7 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category.",
-      image: "https://media.licdn.com/dms/image/v2/D4E2DAQEhRLhr_9R8qw/profile-treasury-image-shrink_1280_1280/B4EZuF.j3qIUAQ-/0/1767479334026?e=1776769200&v=beta&t=Do79bLwQPR_mQPeWcHedyHhspnxmnJMOrccMwdUURvc",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716203526194?e=1777507200&v=beta&t=wnhk58DI6pCYuWKuhSoNcW3sbB-mFu1O1ehD1YYFwCU",
       github: "https://github.com",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
