@@ -9,7 +9,7 @@ export const portfolioData = {
     aboutMe: "I am an active volunteer with strong teamwork and communication skills, experienced in dynamic environments. I have a background in programming and cybersecurity, along with achievements such as being a 3-time STEAM competition winner. I am responsible, adaptable, and always eager to learn and contribute effectively.",
     phone: "+994-51-426-26-76",
     email: "huseynlinicat2010@gmail.com",
-    linkedin: "https://linkedin.com/in/nicathuseynli",
+    linkedin: "https://www.linkedin.com/in/nicat-huseynli-12022b283/",
     instagram: "https://instagram.com/nicathuseynli",
     education: "Secondary School No. 204",
     location: "Baku, Azerbaijan"

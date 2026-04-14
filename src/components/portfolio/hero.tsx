@@ -4,7 +4,7 @@
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/app/lib/data';
-import { ArrowRight, Code, Trophy, Shield } from 'lucide-react';
+import { ArrowRight, Code, Trophy, Shield, FileText } from 'lucide-react';
 
 export function Hero() {
   const { name, title, profession } = portfolioData.personalInfo;
@@ -46,8 +46,11 @@ export function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
-            <Button size="lg" variant="outline" className="rounded-full" asChild>
-              <a href="#contact">Contact Me</a>
+            <Button size="lg" variant="outline" className="rounded-full group" asChild>
+              <a href="#cv">
+                <FileText className="mr-2 h-4 w-4" />
+                Download CV
+              </a>
             </Button>
           </div>
 
