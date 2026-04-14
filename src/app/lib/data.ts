@@ -20,7 +20,6 @@ export const portfolioData = {
       { name: "Programming (C++)", level: 90 },
       { name: "Cybersecurity", level: 75 },
       { name: "Electronics", level: 80 },
-      { name: "Python", level: 70 },
       { name: "Robotics", level: 85 }
     ],
     soft: [
@@ -75,14 +74,16 @@ export const portfolioData = {
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Programming",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
-      organization: "Hədəf Kursları"
+      organization: "Hədəf Kursları",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       year: "2023",
       title: "AzercellCup Programming Olympiad",
       category: "Programming",
       description: "1st place nationwide in C++ programming.",
-      organization: "Azercell | Ministry of Science and Education"
+      organization: "Azercell | Ministry of Science and Education",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc"
     },
     {
       year: "2025",
@@ -115,7 +116,6 @@ export const portfolioData = {
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no",
-      github: "https://github.com",
       tags: ["C++", "Aerospace", "IoT"]
     },
     {
@@ -123,7 +123,6 @@ export const portfolioData = {
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716203526194?e=1777507200&v=beta&t=wnhk58DI6pCYuWKuhSoNcW3sbB-mFu1O1ehD1YYFwCU",
-      github: "https://github.com",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
     {
@@ -131,7 +130,6 @@ export const portfolioData = {
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
-      github: "https://github.com",
       tags: ["Robotics", "Engineering", "C++"]
     }
   ],
@@ -142,7 +140,6 @@ export const portfolioData = {
       role: "Founder & Lead Developer",
       description: "An exam platform for students to practice and improve their scores with personalized feedback. Revolutionizing exam preparation.",
       image: "https://www.image2url.com/r2/default/images/1776165304228-51ae6fdf-a65a-46f2-91fa-2cde84248ed2.png",
-      github: "https://github.com",
       liveUrl: "https://sinaqmerkezi.vercel.app/",
       tags: ["Next.js", "Education", "Founder"]
     }
@@ -181,7 +178,7 @@ export const portfolioData = {
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Programming",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_2048_1536/B4EZb7NQvuGcAo-/0/1747971285874?e=1777507200&v=beta&t=Z5n63_iFq5NzZCT-orBVHCEmaaIIH9N_fi5JlYfVdrU"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       id: "c4",

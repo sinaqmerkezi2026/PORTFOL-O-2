@@ -4,7 +4,7 @@
 import { portfolioData } from '@/app/lib/data';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { FileText, Download, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { FileText, Linkedin, Mail } from 'lucide-react';
 
 export function CVSection() {
   const { name, email, linkedin, aboutMe, location, cvLink } = portfolioData.personalInfo;
@@ -34,8 +34,8 @@ export function CVSection() {
                     <div className="w-full space-y-3 pt-4">
                       <Button className="w-full rounded-xl gap-2" size="lg" asChild>
                         <a href={cvLink} target="_blank" rel="noopener noreferrer">
-                          <Download className="w-4 h-4" />
-                          Download PDF
+                          <FileText className="w-4 h-4" />
+                          View CV
                         </a>
                       </Button>
                       <Button variant="outline" className="w-full rounded-xl gap-2" asChild>

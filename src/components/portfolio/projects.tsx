@@ -7,7 +7,7 @@ import { portfolioData } from '@/app/lib/data';
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Sparkles, Upload, FileUp, Loader2, ArrowRight, ShieldCheck } from 'lucide-react';
+import { ExternalLink, Sparkles, Upload, FileUp, Loader2, ArrowRight, ShieldCheck } from 'lucide-react';
 import { summarizeProjectDescription } from '@/ai/flows/summarize-project-description';
 import { useToast } from '@/hooks/use-toast';
 import { useCollection, useFirestore, errorEmitter } from '@/firebase';
@@ -53,7 +53,6 @@ export function Projects() {
           title: "New Project: " + file.name.split('.')[0],
           description: "This project was added dynamically. It showcases my latest work and technical skills.",
           image: dataUrl,
-          github: "https://github.com",
           tags: ["New", "Dynamic"],
           createdAt: serverTimestamp()
         };
@@ -160,12 +159,6 @@ export function Projects() {
                         <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                       </a>
                     </Button>
-                    <Button variant="outline" className="rounded-full px-8 gap-2" asChild>
-                      <a href={project.github} target="_blank" rel="noopener noreferrer">
-                        <Github className="w-4 h-4" />
-                        GitHub
-                      </a>
-                    </Button>
                   </div>
                 </div>
               </div>
@@ -218,11 +211,6 @@ export function Projects() {
               </CardContent>
               
               <CardFooter className="p-6 pt-0 flex justify-end">
-                <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary" asChild>
-                  <a href={(project as any).github} target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4" />
-                  </a>
-                </Button>
                 <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary" asChild>
                   <a href={(project as any).liveUrl || "#"} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-4 w-4" />
