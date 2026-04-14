@@ -2,13 +2,17 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/app/lib/data';
+import { PlaceHolderImages } from '@/app/lib/placeholder-images';
 import { ArrowRight, Code, Trophy, Shield, FileText } from 'lucide-react';
 
 export function Hero() {
   const { name, title, profession, cvLink } = portfolioData.personalInfo;
   const [professionIndex, setProfessionIndex] = useState(0);
+
+  const avatarImage = PlaceHolderImages.find(img => img.id === 'avatar')?.imageUrl || "";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -78,17 +82,30 @@ export function Hero() {
 
         <div className="hidden lg:flex justify-center items-center animate-in zoom-in duration-1000">
           <div className="relative w-[450px] h-[450px]">
-             {/* Floating elements animation would go here */}
+             {/* Floating elements animation decoration */}
              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/20 flex items-center justify-center p-8 overflow-hidden">
-                <div className="w-full h-full bg-secondary/50 rounded-full flex items-center justify-center relative">
-                   <div className="absolute top-10 right-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[3s]">
+                <div className="w-full h-full bg-secondary/50 rounded-full flex items-center justify-center relative overflow-hidden">
+                   {avatarImage ? (
+                     <div className="absolute inset-0 w-full h-full">
+                       <Image 
+                         src={avatarImage}
+                         alt={name}
+                         fill
+                         className="object-cover"
+                         priority
+                       />
+                     </div>
+                   ) : (
+                    <div className="text-center">
+                        <div className="text-6xl font-black gradient-text">NH</div>
+                    </div>
+                   )}
+                   
+                   <div className="absolute top-10 right-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[3s] z-20">
                       <div className="text-primary font-bold">C++</div>
                    </div>
-                   <div className="absolute bottom-10 left-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[4s] delay-700">
+                   <div className="absolute bottom-10 left-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[4s] delay-700 z-20">
                       <div className="text-accent font-bold">SAF Winner</div>
-                   </div>
-                   <div className="text-center">
-                      <div className="text-6xl font-black gradient-text">NC</div>
                    </div>
                 </div>
              </div>
