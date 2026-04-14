@@ -1,0 +1,44 @@
+
+{
+  "entities": {
+    "Project": {
+      "title": "Project",
+      "description": "A portfolio project item",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "github": { "type": "string" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "image"]
+    },
+    "Certificate": {
+      "title": "Certificate",
+      "description": "A certification or badge",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "image": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "description", "image"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "projects": {
+      "schema": "Project",
+      "description": "Collection of portfolio projects"
+    },
+    "certificates": {
+      "schema": "Certificate",
+      "description": "Collection of certifications"
+    }
+  }
+}

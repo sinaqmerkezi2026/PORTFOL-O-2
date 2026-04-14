@@ -1,20 +1,41 @@
 
 "use client";
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useMemo } from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/app/lib/data';
 import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
-import { Eye, Upload, FileUp, Sparkles } from 'lucide-react';
+import { Eye, Upload, FileUp, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useCollection, useFirestore, errorEmitter } from '@/firebase';
+import { collection, addDoc, serverTimestamp, query, orderBy } from 'firebase/firestore';
+import { FirestorePermissionError } from '@/firebase/errors';
 
 export function Certificates() {
   const { toast } = useToast();
+  const db = useFirestore();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
+
+  const certsQuery = useMemo(() => {
+    if (!db) return null;
+    return query(collection(db, 'certificates'), orderBy('createdAt', 'desc'));
+  }, [db]);
+
+  const { data: dbCerts, loading: dbLoading } = useCollection(certsQuery);
+
+  const allCerts = useMemo(() => {
+    const firestoreCerts = dbCerts?.map(doc => ({
+      id: doc.id,
+      title: doc.title,
+      description: doc.description,
+      image: doc.image
+    })) || [];
+    return [...firestoreCerts, ...portfolioData.certificates];
+  }, [dbCerts]);
 
   const handleUploadClick = () => {
     fileInputRef.current?.click();
@@ -22,16 +43,33 @@ export function Certificates() {
 
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
-    if (file) {
+    if (file && db) {
       setIsUploading(true);
-      // Simulate upload process
-      setTimeout(() => {
-        setIsUploading(false);
-        toast({
-          title: "Certificate Uploaded",
-          description: `${file.name} has been received. Note: This is a temporary preview feature.`,
+      
+      const newCert = {
+        title: "Newly Uploaded Certificate",
+        description: `Certificate for ${file.name}. Stored persistently in Firestore.`,
+        image: "https://picsum.photos/seed/" + Math.random() + "/800/600",
+        createdAt: serverTimestamp()
+      };
+
+      addDoc(collection(db, 'certificates'), newCert)
+        .then(() => {
+          setIsUploading(false);
+          toast({
+            title: "Certificate Saved",
+            description: `${file.name} has been added to your persistent collection.`,
+          });
+        })
+        .catch(async (error) => {
+          setIsUploading(false);
+          const permissionError = new FirestorePermissionError({
+            path: 'certificates',
+            operation: 'create',
+            requestResourceData: newCert
+          });
+          errorEmitter.emit('permission-error', permissionError);
         });
-      }, 1500);
     }
   };
 
@@ -57,14 +95,16 @@ export function Certificates() {
               className="rounded-full border-primary/50 hover:bg-primary/10 group"
               disabled={isUploading}
             >
-              <Upload className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />
-              {isUploading ? "Uploading..." : "Upload New Cert"}
+              {isUploading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : <Upload className="mr-2 h-4 w-4 group-hover:-translate-y-1 transition-transform" />}
+              {isUploading ? "Saving..." : "Upload New Cert"}
             </Button>
           </div>
         </div>
 
+        {dbLoading && <div className="flex justify-center mb-8"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>}
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {portfolioData.certificates.map((cert) => (
+          {allCerts.map((cert) => (
             <Dialog key={cert.id}>
               <DialogTrigger asChild>
                 <Card className="glass-card cursor-pointer group hover:border-accent/50 transition-all overflow-hidden h-full">
@@ -111,7 +151,6 @@ export function Certificates() {
             </Dialog>
           ))}
 
-          {/* Empty state / placeholder for new uploads */}
           <Card 
             className="border-dashed border-2 bg-transparent hover:bg-primary/5 cursor-pointer transition-colors flex flex-col items-center justify-center p-12 text-center"
             onClick={handleUploadClick}
@@ -120,7 +159,7 @@ export function Certificates() {
               <FileUp className="w-8 h-8" />
             </div>
             <h4 className="font-bold text-lg mb-1">Add Another</h4>
-            <p className="text-sm text-muted-foreground">Drag and drop your certificate PDF here</p>
+            <p className="text-sm text-muted-foreground">Save your certificate to the cloud</p>
           </Card>
         </div>
       </div>
