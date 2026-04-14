@@ -8,22 +8,34 @@
       "imageHint": "technology abstract"
     },
     {
-      "id": "project-drone",
-      "description": "Edu Drone Project",
-      "imageUrl": "https://picsum.photos/seed/drone/600/400",
+      "id": "project-drone-saf2022",
+      "description": "SAF 2022 Edu Drone Project",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
       "imageHint": "drone robotics"
+    },
+    {
+      "id": "project-boat-saf2023",
+      "description": "SAF 2023 Boat Racing Project",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E2DAQEhRLhr_9R8qw/profile-treasury-image-shrink_1280_1280/B4EZuF.j3qIUAQ-/0/1767479334026?e=1776769200&v=beta&t=Do79bLwQPR_mQPeWcHedyHhspnxmnJMOrccMwdUURvc",
+      "imageHint": "robotic boat"
+    },
+    {
+      "id": "project-cubesat-saf2025",
+      "description": "SAF 2025 CubeSat Category",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQGOzYRzy8gW0A/feedshare-shrink_1280/B4EZqhjOQLKYAs-/0/1763646959976?e=1777507200&v=beta&t=_b-ZWI2quDf0yOqn57Sr_I8i3FczKNaPEJxRjoMCfSo",
+      "imageHint": "satellite space"
+    },
+    {
+      "id": "project-saf2025-additional",
+      "description": "SAF 2025 Project Display",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEkVnIto6jqdQ/feedshare-shrink_1280/B4EZqhjON_JgAs-/0/1763646958651?e=1777507200&v=beta&t=Ux8y42M_PEgPsBFmcjPYzvO2slpd58wkQA5G493V40M",
+      "imageHint": "technology display"
     },
     {
       "id": "project-mountain",
       "description": "Mountain Tourism Platform",
       "imageUrl": "https://picsum.photos/seed/mountain/600/400",
       "imageHint": "mountain website"
-    },
-    {
-      "id": "project-cubesat",
-      "description": "CubeSat Satellite Project",
-      "imageUrl": "https://picsum.photos/seed/space/600/400",
-      "imageHint": "satellite space"
     },
     {
       "id": "cert-cpp",

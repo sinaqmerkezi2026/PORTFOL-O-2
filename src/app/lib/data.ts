@@ -71,28 +71,36 @@ export const portfolioData = {
   ],
   projects: [
     {
-      id: "1",
-      title: "Mountain Tourism Web Platform",
-      description: "A comprehensive web platform for mountain tourism featuring a booking system and exclusive coupon rewards. Built during the National Inter-School Hackathon 2025.",
-      image: PlaceHolderImages.find(img => img.id === 'project-mountain')?.imageUrl || "",
+      id: "p-saf-2025",
+      title: "SAF 2025 — CubeSat Engineering",
+      description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation in satellite prototyping.",
+      image: PlaceHolderImages.find(img => img.id === 'project-cubesat-saf2025')?.imageUrl || "",
       github: "https://github.com",
-      tags: ["Web", "Node.js", "React"]
+      tags: ["C++", "Aerospace", "IoT"]
     },
     {
-      id: "2",
+      id: "p-saf-2023",
+      title: "SAF 2023 — Boat Racing",
+      description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category at the International Steam Azerbaijan Festival.",
+      image: PlaceHolderImages.find(img => img.id === 'project-boat-saf2023')?.imageUrl || "",
+      github: "https://github.com",
+      tags: ["Electronics", "Robotics", "3D Printing"]
+    },
+    {
+      id: "p-saf-2022",
+      title: "SAF 2022 — Edu Drone",
+      description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
+      image: PlaceHolderImages.find(img => img.id === 'project-drone-saf2022')?.imageUrl || "",
+      github: "https://github.com",
+      tags: ["Robotics", "Engineering", "C++"]
+    },
+    {
+      id: "p-snaq",
       title: "Sınaq Mərkəzi AI",
       description: "Founder of “Sınaq Mərkəzi” — An AI-powered exam platform for students to practice and improve their scores with personalized feedback.",
       image: PlaceHolderImages.find(img => img.id === 'hero-bg')?.imageUrl || "",
       github: "https://github.com",
       tags: ["AI", "Next.js", "Education"]
-    },
-    {
-      id: "3",
-      title: "CubeSat Engineering",
-      description: "Developing space systems engineering models for CubeSat category at SAF 2025.",
-      image: PlaceHolderImages.find(img => img.id === 'project-cubesat')?.imageUrl || "",
-      github: "https://github.com",
-      tags: ["C++", "Aerospace", "IoT"]
     }
   ],
   certificates: [
@@ -125,12 +133,6 @@ export const portfolioData = {
       title: "Technest Cybersecurity Program",
       description: "Intensive training program by Techspace Azerbaijan.",
       image: PlaceHolderImages.find(img => img.id === 'cert-cyber')?.imageUrl || ""
-    },
-    {
-      id: "c3",
-      title: "Electronics Training Program",
-      description: "Code&More electronics scholarship program completion.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-cpp')?.imageUrl || ""
     }
   ],
   educationDetails: [
