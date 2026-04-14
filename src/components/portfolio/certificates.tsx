@@ -10,13 +10,14 @@ import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
 import { Eye, Upload, FileUp, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
-import { useCollection, useFirestore, errorEmitter } from '@/firebase';
+import { useCollection, useFirestore, useUser, errorEmitter } from '@/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy } from 'firebase/firestore';
 import { FirestorePermissionError } from '@/firebase/errors';
 
 export function Certificates() {
   const { toast } = useToast();
   const db = useFirestore();
+  const { user } = useUser();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
 
@@ -38,6 +39,14 @@ export function Certificates() {
   }, [dbCerts]);
 
   const handleUploadClick = () => {
+    if (!user) {
+      toast({
+        variant: "destructive",
+        title: "Authentication Required",
+        description: "Please login to upload certificates.",
+      });
+      return;
+    }
     fileInputRef.current?.click();
   };
 
@@ -46,30 +55,35 @@ export function Certificates() {
     if (file && db) {
       setIsUploading(true);
       
-      const newCert = {
-        title: "Newly Uploaded Certificate",
-        description: `Certificate for ${file.name}. Stored persistently in Firestore.`,
-        image: "https://picsum.photos/seed/" + Math.random() + "/800/600",
-        createdAt: serverTimestamp()
-      };
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const dataUrl = reader.result as string;
+        const newCert = {
+          title: file.name.split('.')[0].replace(/-/g, ' '),
+          description: `Certification verification for ${file.name}. Stored persistently in Firestore.`,
+          image: dataUrl,
+          createdAt: serverTimestamp()
+        };
 
-      addDoc(collection(db, 'certificates'), newCert)
-        .then(() => {
-          setIsUploading(false);
-          toast({
-            title: "Certificate Saved",
-            description: `${file.name} has been added to your persistent collection.`,
+        addDoc(collection(db, 'certificates'), newCert)
+          .then(() => {
+            setIsUploading(false);
+            toast({
+              title: "Certificate Saved",
+              description: `${file.name} has been added to your collection.`,
+            });
+          })
+          .catch(async (error) => {
+            setIsUploading(false);
+            const permissionError = new FirestorePermissionError({
+              path: 'certificates',
+              operation: 'create',
+              requestResourceData: newCert
+            });
+            errorEmitter.emit('permission-error', permissionError);
           });
-        })
-        .catch(async (error) => {
-          setIsUploading(false);
-          const permissionError = new FirestorePermissionError({
-            path: 'certificates',
-            operation: 'create',
-            requestResourceData: newCert
-          });
-          errorEmitter.emit('permission-error', permissionError);
-        });
+      };
+      reader.readAsDataURL(file);
     }
   };
 

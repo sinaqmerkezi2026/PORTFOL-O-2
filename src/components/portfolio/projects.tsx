@@ -7,16 +7,17 @@ import { portfolioData } from '@/app/lib/data';
 import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { Github, ExternalLink, Sparkles, Upload, FileUp, Loader2 } from 'lucide-react';
+import { Github, ExternalLink, Sparkles, Upload, FileUp, Loader2, ArrowRight } from 'lucide-react';
 import { summarizeProjectDescription } from '@/ai/flows/summarize-project-description';
 import { useToast } from '@/hooks/use-toast';
-import { useCollection, useFirestore, errorEmitter } from '@/firebase';
+import { useCollection, useFirestore, useUser, errorEmitter } from '@/firebase';
 import { collection, addDoc, serverTimestamp, query, orderBy } from 'firebase/firestore';
 import { FirestorePermissionError } from '@/firebase/errors';
 
 export function Projects() {
   const { toast } = useToast();
   const db = useFirestore();
+  const { user } = useUser();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
   const [summaries, setSummaries] = useState<Record<string, string>>({});
@@ -29,7 +30,6 @@ export function Projects() {
 
   const { data: dbProjects, loading: dbLoading } = useCollection(projectsQuery);
 
-  // Merge static data with dynamic data from Firestore
   const allProjects = useMemo(() => {
     const firestoreProjects = dbProjects?.map(doc => ({
       id: doc.id,
@@ -39,6 +39,14 @@ export function Projects() {
   }, [dbProjects]);
 
   const handleUploadClick = () => {
+    if (!user) {
+      toast({
+        variant: "destructive",
+        title: "Authentication Required",
+        description: "Please login to add new projects to the database.",
+      });
+      return;
+    }
     fileInputRef.current?.click();
   };
 
@@ -47,32 +55,37 @@ export function Projects() {
     if (file && db) {
       setIsUploading(true);
       
-      const newProject = {
-        title: "New Dynamic Project",
-        description: "This project was added dynamically via the dashboard.",
-        image: "https://picsum.photos/seed/" + Math.random() + "/600/400",
-        github: "https://github.com",
-        tags: ["New", "Dynamic"],
-        createdAt: serverTimestamp()
-      };
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const dataUrl = reader.result as string;
+        const newProject = {
+          title: "New Project: " + file.name.split('.')[0],
+          description: "This project was added dynamically via the dashboard. It showcases my latest work and technical skills.",
+          image: dataUrl,
+          github: "https://github.com",
+          tags: ["New", "Dynamic"],
+          createdAt: serverTimestamp()
+        };
 
-      addDoc(collection(db, 'projects'), newProject)
-        .then(() => {
-          setIsUploading(false);
-          toast({
-            title: "Project Added",
-            description: `${file.name} has been saved to the database.`,
+        addDoc(collection(db, 'projects'), newProject)
+          .then(() => {
+            setIsUploading(false);
+            toast({
+              title: "Project Added",
+              description: `${file.name} has been saved to the database.`,
+            });
+          })
+          .catch(async (error) => {
+            setIsUploading(false);
+            const permissionError = new FirestorePermissionError({
+              path: 'projects',
+              operation: 'create',
+              requestResourceData: newProject
+            });
+            errorEmitter.emit('permission-error', permissionError);
           });
-        })
-        .catch(async (error) => {
-          setIsUploading(false);
-          const permissionError = new FirestorePermissionError({
-            path: 'projects',
-            operation: 'create',
-            requestResourceData: newProject
-          });
-          errorEmitter.emit('permission-error', permissionError);
-        });
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -176,7 +189,7 @@ export function Projects() {
               <CardFooter className="p-6 pt-0 border-t flex justify-between items-center">
                 <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Project Details</span>
                 <Button variant="ghost" size="icon">
-                  <ArrowRightIcon className="h-4 w-4" />
+                  <ArrowRight className="h-4 w-4" />
                 </Button>
               </CardFooter>
             </Card>
@@ -195,25 +208,5 @@ export function Projects() {
         </div>
       </div>
     </section>
-  );
-}
-
-function ArrowRightIcon(props: React.SVGProps<SVGSVGElement>) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M5 12h14" />
-      <path d="m12 5 7 7-7 7" />
-    </svg>
   );
 }

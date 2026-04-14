@@ -2,14 +2,19 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { Moon, Sun, Menu, X, FileText } from 'lucide-react';
+import { Moon, Sun, Menu, X, LogIn, LogOut, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { useUser, useAuth } from '@/firebase';
+import { GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/auth';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { user, loading } = useUser();
+  const auth = useAuth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,7 +22,6 @@ export function Navbar() {
     };
     window.addEventListener('scroll', handleScroll);
     
-    // Initialize theme
     if (document.documentElement.classList.contains('dark')) {
       setIsDarkMode(true);
     } else {
@@ -31,6 +35,17 @@ export function Navbar() {
     setIsDarkMode(!isDarkMode);
     document.documentElement.classList.toggle('dark');
   };
+
+  const handleLogin = async () => {
+    const provider = new GoogleAuthProvider();
+    try {
+      await signInWithPopup(auth, provider);
+    } catch (error) {
+      console.error("Login failed:", error);
+    }
+  };
+
+  const handleLogout = () => signOut(auth);
 
   const navLinks = [
     { name: 'About', href: '#about' },
@@ -52,7 +67,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop Nav */}
-        <div className="hidden md:flex items-center space-x-8">
+        <div className="hidden md:flex items-center space-x-6">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -62,9 +77,31 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
-          <Button variant="ghost" size="icon" onClick={toggleTheme}>
-            {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-          </Button>
+          
+          <div className="flex items-center gap-2 pl-4 border-l">
+            <Button variant="ghost" size="icon" onClick={toggleTheme}>
+              {isDarkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+
+            {!loading && (
+              user ? (
+                <div className="flex items-center gap-3">
+                  <Avatar className="h-8 w-8 border border-primary/20">
+                    <AvatarImage src={user.photoURL || ""} />
+                    <AvatarFallback><User className="h-4 w-4" /></AvatarFallback>
+                  </Avatar>
+                  <Button variant="ghost" size="icon" onClick={handleLogout} title="Logout">
+                    <LogOut className="h-5 w-5" />
+                  </Button>
+                </div>
+              ) : (
+                <Button variant="outline" size="sm" onClick={handleLogin} className="rounded-full gap-2">
+                  <LogIn className="h-4 w-4" />
+                  Login
+                </Button>
+              )
+            )}
+          </div>
         </div>
 
         {/* Mobile Toggle */}
@@ -91,6 +128,15 @@ export function Navbar() {
               {link.name}
             </a>
           ))}
+          <div className="pt-4 border-t">
+            {!loading && (
+              user ? (
+                <Button variant="outline" className="w-full" onClick={handleLogout}>Logout</Button>
+              ) : (
+                <Button className="w-full" onClick={handleLogin}>Login with Google</Button>
+              )
+            )}
+          </div>
         </div>
       )}
     </nav>
