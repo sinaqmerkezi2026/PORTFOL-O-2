@@ -50,20 +50,44 @@ export const portfolioData = {
     {
       year: "2025",
       title: "2nd Turkic Integration Olympiad (TIO)",
+      category: "Programming",
       description: "Silver Medal winner. Integrated competition covering mathematics, computer science, chemistry, biology, history, physics, and geography among Turkic states.",
       organization: "Hədəf Kursları"
     },
     {
       year: "2025",
       title: "National Inter-School Hackathon",
+      category: "Hackathons",
       description: "Selected among 300 finalists from ~300,000 participants. Developed a web platform for mountain tourism with a booking and coupon system.",
       organization: "Ministry of Science and Education Republic of Azerbaijan"
     },
     {
       year: "2023",
       title: "AzercellCup Programming Olympiad",
+      category: "Programming",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education"
+    },
+    {
+      year: "2025",
+      title: "SAF 2025 — CubeSat Engineering",
+      category: "Making",
+      description: "Awarded 2nd place for technical innovation in satellite prototyping.",
+      organization: "International Steam Azerbaijan Festival"
+    },
+    {
+      year: "2023",
+      title: "SAF 2023 — Boat Racing",
+      category: "Making",
+      description: "Secured 3rd place in the Boat Racing category. Built a custom 3D-printed surface watercraft.",
+      organization: "International Steam Azerbaijan Festival"
+    },
+    {
+      year: "2022",
+      title: "SAF 2022 — Edu Drone",
+      category: "Making",
+      description: "3rd place winner. Developed an educational drone focused on flight control electronics.",
+      organization: "International Steam Azerbaijan Festival"
     }
   ],
   projects: [
@@ -108,36 +132,42 @@ export const portfolioData = {
     {
       id: "c1",
       title: "Deneyap Technology Laboratories",
+      category: "Education",
       description: "3-year scholarship program completion in high-tech fields including robotics, coding, and design.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQEftN5uICOKyw/feedshare-shrink_1280/B4EZo5rEUkKgAs-/0/1761904184340?e=1777507200&v=beta&t=ZYlyBmx-7XsUvFumYJhzrpbGbizdH1028_IXw686ET8"
     },
     {
       id: "c2",
       title: "2nd Turkic Integration Olympiad (TIO)",
+      category: "Programming",
       description: "Silver medal recognition for excellence in interdisciplinary sciences across Turkic states.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_2048_1536/B4EZb7NQvuGcAo-/0/1747971285874?e=1777507200&v=beta&t=Z5n63_iFq5NzZCT-orBVHCEmaaIIH9N_fi5JlYfVdrU"
     },
     {
       id: "c3",
       title: "Spring Camp for Student Volunteers",
+      category: "Leadership",
       description: "Leadership and team-building training program, resulting in a first-place competition finish.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQFK8hahvK4XQw/feedshare-shrink_2048_1536/B4EZZ9V9.MHMAo-/0/1745859638420?e=1777507200&v=beta&t=i6VQQcpF2mWYyJdk-2LddOL56e3Gixq0dySd3JR3bl8"
     },
     {
       id: "c4",
       title: "Technest Cybersecurity Program",
+      category: "Education",
       description: "Intensive cybersecurity training provided by Techspace Azerbaijan under the Technest scholarship.",
       image: "https://media.licdn.com/dms/image/v2/D5622AQEQPzHGw6ysHQ/feedshare-shrink_800/feedshare-shrink_800/0/1729621553221?e=1777507200&v=beta&t=Gi-trhawojBf5NZVCfRZWvQbt5h0BQhQ6ay7uPvxIPo"
     },
     {
       id: "c5",
       title: "AzercellCup Programming Olympiad",
+      category: "Programming",
       description: "National recognition for C++ programming excellence, organized by Azercell.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc"
     },
     {
       id: "c6",
       title: "Cyber Summer School - 2023",
+      category: "Education",
       description: "International summer school focused on cybersecurity, organized by ACOA and the State Security Service.",
       image: "https://media.licdn.com/dms/image/v2/D4E22AQEsjuY6ZvN4_A/feedshare-shrink_800/feedshare-shrink_800/0/1716203028002?e=1777507200&v=beta&t=X0-vjk5SgsiBHjUHpcThRyS6A_11sn_y7lDFTguthg8"
     }

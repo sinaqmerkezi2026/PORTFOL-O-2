@@ -8,6 +8,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Dialog, DialogContent, DialogTrigger, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Eye, Upload, FileUp, Loader2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useCollection, useFirestore, errorEmitter } from '@/firebase';
@@ -19,6 +20,8 @@ export function Certificates() {
   const db = useFirestore();
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [isUploading, setIsUploading] = useState(false);
+
+  const categories = ["All", "Education", "Programming", "Leadership"];
 
   const certsQuery = useMemo(() => {
     if (!db) return null;
@@ -32,7 +35,8 @@ export function Certificates() {
       id: doc.id,
       title: doc.title,
       description: doc.description,
-      image: doc.image
+      image: doc.image,
+      category: (doc as any).category || "Education"
     })) || [];
     return [...firestoreCerts, ...portfolioData.certificates];
   }, [dbCerts]);
@@ -53,6 +57,7 @@ export function Certificates() {
           title: file.name.split('.')[0].replace(/-/g, ' '),
           description: `Certification verification for ${file.name}. Stored persistently in Firestore.`,
           image: dataUrl,
+          category: "Education",
           createdAt: serverTimestamp()
         };
 
@@ -84,7 +89,7 @@ export function Certificates() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
           <div className="space-y-4 max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold">Certifications & <span className="gradient-text">Badges</span></h2>
-            <p className="text-muted-foreground">Official recognitions of skill mastery and training program completions, including Coursera and Microsoft verified certifications.</p>
+            <p className="text-muted-foreground">Official recognitions of skill mastery and training program completions, including Coursera and Technest verified certifications.</p>
           </div>
           <div className="flex gap-4">
             <input 
@@ -108,65 +113,88 @@ export function Certificates() {
 
         {dbLoading && <div className="flex justify-center mb-8"><Loader2 className="h-8 w-8 animate-spin text-primary" /></div>}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {allCerts.map((cert) => (
-            <Dialog key={cert.id}>
-              <DialogTrigger asChild>
-                <Card className="glass-card cursor-pointer group hover:border-accent/50 transition-all overflow-hidden h-full">
-                  <div className="relative h-48 w-full">
-                    <Image
-                      src={cert.image}
-                      alt={cert.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
-                    />
-                    <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-all flex items-center justify-center">
-                      <div className="bg-background/80 p-2 rounded-full transform translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
-                        <Eye className="w-6 h-6 text-accent" />
-                      </div>
-                    </div>
-                  </div>
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">{cert.title}</h3>
-                    </div>
-                    <p className="text-sm text-muted-foreground line-clamp-2">{cert.description}</p>
-                  </CardContent>
-                </Card>
-              </DialogTrigger>
-              <DialogContent className="max-w-4xl max-h-[90vh]">
-                <DialogHeader>
-                  <DialogTitle>{cert.title}</DialogTitle>
-                  <DialogDescription>{cert.description}</DialogDescription>
-                </DialogHeader>
-                <ScrollArea className="h-[60vh] w-full mt-4">
-                   <div className="relative aspect-[4/3] w-full bg-secondary/20 rounded-xl overflow-hidden">
-                     <Image
-                        src={cert.image}
-                        alt={cert.title}
-                        fill
-                        className="object-contain"
-                      />
-                   </div>
-                </ScrollArea>
-                <div className="flex justify-end pt-4">
-                   <Button variant="secondary" size="sm">Download PDF</Button>
-                </div>
-              </DialogContent>
-            </Dialog>
-          ))}
+        <Tabs defaultValue="All" className="w-full">
+          <div className="flex justify-center mb-12">
+            <TabsList className="bg-background/50 p-1 rounded-full h-auto border">
+              {categories.map(cat => (
+                <TabsTrigger key={cat} value={cat} className="rounded-full px-6 py-2 font-bold data-[state=active]:bg-accent data-[state=active]:text-accent-foreground">
+                  {cat}
+                </TabsTrigger>
+              ))}
+            </TabsList>
+          </div>
 
-          <Card 
-            className="border-dashed border-2 bg-transparent hover:bg-primary/5 cursor-pointer transition-colors flex flex-col items-center justify-center p-12 text-center"
-            onClick={handleUploadClick}
-          >
-            <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
-              <FileUp className="w-8 h-8" />
-            </div>
-            <h4 className="font-bold text-lg mb-1">Add Another</h4>
-            <p className="text-sm text-muted-foreground">Save your certificate to the cloud</p>
-          </Card>
-        </div>
+          {categories.map(cat => (
+            <TabsContent key={cat} value={cat} className="animate-in fade-in duration-500">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {allCerts
+                  .filter(cert => cat === "All" || cert.category === cat)
+                  .map((cert) => (
+                    <Dialog key={cert.id}>
+                      <DialogTrigger asChild>
+                        <Card className="glass-card cursor-pointer group hover:border-accent/50 transition-all overflow-hidden h-full">
+                          <div className="relative h-48 w-full">
+                            <Image
+                              src={cert.image}
+                              alt={cert.title}
+                              fill
+                              className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
+                            />
+                            <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-all flex items-center justify-center">
+                              <div className="bg-background/80 p-2 rounded-full transform translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
+                                <Eye className="w-6 h-6 text-accent" />
+                              </div>
+                            </div>
+                          </div>
+                          <CardContent className="p-6">
+                            <div className="flex items-start justify-between gap-2 mb-2">
+                              <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">{cert.title}</h3>
+                            </div>
+                            <p className="text-sm text-muted-foreground line-clamp-2">{cert.description}</p>
+                            <span className="mt-4 inline-block text-[10px] font-black uppercase tracking-tighter text-accent bg-accent/10 px-2 py-0.5 rounded">
+                              {cert.category}
+                            </span>
+                          </CardContent>
+                        </Card>
+                      </DialogTrigger>
+                      <DialogContent className="max-w-4xl max-h-[90vh]">
+                        <DialogHeader>
+                          <DialogTitle>{cert.title}</DialogTitle>
+                          <DialogDescription>{cert.description}</DialogDescription>
+                        </DialogHeader>
+                        <ScrollArea className="h-[60vh] w-full mt-4">
+                           <div className="relative aspect-[4/3] w-full bg-secondary/20 rounded-xl overflow-hidden">
+                             <Image
+                                src={cert.image}
+                                alt={cert.title}
+                                fill
+                                className="object-contain"
+                              />
+                           </div>
+                        </ScrollArea>
+                        <div className="flex justify-end pt-4">
+                           <Button variant="secondary" size="sm">Download PDF</Button>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
+                  ))}
+
+                {cat === "All" && (
+                  <Card 
+                    className="border-dashed border-2 bg-transparent hover:bg-primary/5 cursor-pointer transition-colors flex flex-col items-center justify-center p-12 text-center"
+                    onClick={handleUploadClick}
+                  >
+                    <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-4 text-primary group-hover:scale-110 transition-transform">
+                      <FileUp className="w-8 h-8" />
+                    </div>
+                    <h4 className="font-bold text-lg mb-1">Add Another</h4>
+                    <p className="text-sm text-muted-foreground">Save your certificate to the cloud</p>
+                  </Card>
+                )}
+              </div>
+            </TabsContent>
+          ))}
+        </Tabs>
       </div>
     </section>
   );
