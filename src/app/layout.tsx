@@ -7,6 +7,9 @@ import { FirebaseClientProvider } from '@/firebase';
 export const metadata: Metadata = {
   title: 'Nicat Huseynli | Portfolio',
   description: 'Professional portfolio of Nicat Huseynli, a dedicated student developer, C++ programmer, and competition winner.',
+  icons: {
+    icon: 'data:image/x-icon;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8/5+hHgAHggJ/PchI7wAAAABJRU5ErkJggg==',
+  },
 };
 
 export default function RootLayout({
