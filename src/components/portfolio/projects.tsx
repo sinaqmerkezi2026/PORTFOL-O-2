@@ -154,13 +154,17 @@ export function Projects() {
                     ))}
                   </div>
                   <div className="flex gap-4 pt-4">
-                    <Button className="rounded-full px-8 gap-2 group">
-                      Live Platform
-                      <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    <Button className="rounded-full px-8 gap-2 group" asChild>
+                      <a href={(project as any).liveUrl} target="_blank" rel="noopener noreferrer">
+                        Live Platform
+                        <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </a>
                     </Button>
-                    <Button variant="outline" className="rounded-full px-8 gap-2">
-                      <Github className="w-4 h-4" />
-                      GitHub
+                    <Button variant="outline" className="rounded-full px-8 gap-2" asChild>
+                      <a href={project.github} target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4" />
+                        GitHub
+                      </a>
                     </Button>
                   </div>
                 </div>
@@ -214,11 +218,15 @@ export function Projects() {
               </CardContent>
               
               <CardFooter className="p-6 pt-0 flex justify-end">
-                <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
-                  <Github className="h-4 w-4" />
+                <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary" asChild>
+                  <a href={(project as any).github} target="_blank" rel="noopener noreferrer">
+                    <Github className="h-4 w-4" />
+                  </a>
                 </Button>
-                <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary">
-                  <ExternalLink className="h-4 w-4" />
+                <Button variant="ghost" size="icon" className="rounded-full hover:bg-primary/10 hover:text-primary" asChild>
+                  <a href={(project as any).liveUrl || "#"} target="_blank" rel="noopener noreferrer">
+                    <ExternalLink className="h-4 w-4" />
+                  </a>
                 </Button>
               </CardFooter>
             </Card>

@@ -71,7 +71,7 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation in satellite prototyping.",
-      image: PlaceHolderImages.find(img => img.id === 'project-cubesat-saf2025')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGOzYRzy8gW0A/feedshare-shrink_1280/B4EZqhjOQLKYAs-/0/1763646959976?e=1777507200&v=beta&t=_b-ZWI2quDf0yOqn57Sr_I8i3FczKNaPEJxRjoMCfSo",
       github: "https://github.com",
       tags: ["C++", "Aerospace", "IoT"]
     },
@@ -79,7 +79,7 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category at the International Steam Azerbaijan Festival.",
-      image: PlaceHolderImages.find(img => img.id === 'project-boat-saf2023')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E2DAQEhRLhr_9R8qw/profile-treasury-image-shrink_1280_1280/B4EZuF.j3qIUAQ-/0/1767479334026?e=1776769200&v=beta&t=Do79bLwQPR_mQPeWcHedyHhspnxmnJMOrccMwdUURvc",
       github: "https://github.com",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
@@ -87,7 +87,7 @@ export const portfolioData = {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: PlaceHolderImages.find(img => img.id === 'project-drone-saf2022')?.imageUrl || "",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
       github: "https://github.com",
       tags: ["Robotics", "Engineering", "C++"]
     }
@@ -95,11 +95,12 @@ export const portfolioData = {
   founderProjects: [
     {
       id: "p-snaq",
-      title: "Sınaq Mərkəzi AI",
+      title: "Sınaq Mərkəzi",
       role: "Founder & Lead Developer",
       description: "An AI-powered exam platform for students to practice and improve their scores with personalized feedback. Revolutionizing exam preparation through generative AI analysis and adaptive testing.",
-      image: PlaceHolderImages.find(img => img.id === 'hero-bg')?.imageUrl || "",
+      image: "https://www.image2url.com/r2/default/images/1776165304228-51ae6fdf-a65a-46f2-91fa-2cde84248ed2.png",
       github: "https://github.com",
+      liveUrl: "https://sinaqmerkezi.vercel.app/",
       tags: ["AI", "Next.js", "Education", "Founder"]
     }
   ],
@@ -108,37 +109,37 @@ export const portfolioData = {
       id: "c1",
       title: "Deneyap Technology Laboratories",
       description: "3-year scholarship program completion in high-tech fields including robotics, coding, and design.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-deneyap')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEftN5uICOKyw/feedshare-shrink_1280/B4EZo5rEUkKgAs-/0/1761904184340?e=1777507200&v=beta&t=ZYlyBmx-7XsUvFumYJhzrpbGbizdH1028_IXw686ET8"
     },
     {
       id: "c2",
       title: "2nd Turkic Integration Olympiad (TIO)",
       description: "Silver medal recognition for excellence in interdisciplinary sciences across Turkic states.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-tio')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_2048_1536/B4EZb7NQvuGcAo-/0/1747971285874?e=1777507200&v=beta&t=Z5n63_iFq5NzZCT-orBVHCEmaaIIH9N_fi5JlYfVdrU"
     },
     {
       id: "c3",
       title: "Spring Camp for Student Volunteers",
       description: "Leadership and team-building training program, resulting in a first-place competition finish.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-volunteer')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFK8hahvK4XQw/feedshare-shrink_2048_1536/B4EZZ9V9.MHMAo-/0/1745859638420?e=1777507200&v=beta&t=i6VQQcpF2mWYyJdk-2LddOL56e3Gixq0dySd3JR3bl8"
     },
     {
       id: "c4",
       title: "Technest Cybersecurity Program",
       description: "Intensive cybersecurity training provided by Techspace Azerbaijan under the Technest scholarship.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-technest')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D5622AQEQPzHGw6ysHQ/feedshare-shrink_800/feedshare-shrink_800/0/1729621553221?e=1777507200&v=beta&t=Gi-trhawojBf5NZVCfRZWvQbt5h0BQhQ6ay7uPvxIPo"
     },
     {
       id: "c5",
       title: "AzercellCup Programming Olympiad",
       description: "National recognition for C++ programming excellence, organized by Azercell.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-azercell')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc"
     },
     {
       id: "c6",
       title: "Cyber Summer School - 2023",
       description: "International summer school focused on cybersecurity, organized by ACOA and the State Security Service.",
-      image: PlaceHolderImages.find(img => img.id === 'cert-cybersummer')?.imageUrl || ""
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEsjuY6ZvN4_A/feedshare-shrink_800/feedshare-shrink_800/0/1716203028002?e=1777507200&v=beta&t=X0-vjk5SgsiBHjUHpcThRyS6A_11sn_y7lDFTguthg8"
     }
   ],
   volunteering: [
