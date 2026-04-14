@@ -1,0 +1,126 @@
+
+"use client";
+
+import { useState } from 'react';
+import Image from 'next/image';
+import { portfolioData } from '@/app/lib/data';
+import { Card, CardHeader, CardContent, CardFooter } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Github, ExternalLink, Sparkles } from 'lucide-react';
+import { summarizeProjectDescription } from '@/ai/flows/summarize-project-description';
+
+export function Projects() {
+  const [summaries, setSummaries] = useState<Record<string, string>>({});
+  const [loading, setLoading] = useState<Record<string, boolean>>({});
+
+  const handleSummarize = async (projectId: string, description: string) => {
+    setLoading(prev => ({ ...prev, [projectId]: true }));
+    try {
+      const result = await summarizeProjectDescription({ projectDescription: description, maxLengthWords: 30 });
+      setSummaries(prev => ({ ...prev, [projectId]: result.summary }));
+    } catch (error) {
+      console.error("Failed to summarize:", error);
+    } finally {
+      setLoading(prev => ({ ...prev, [projectId]: false }));
+    }
+  };
+
+  return (
+    <section id="projects" className="section-padding bg-secondary/20">
+      <div className="container mx-auto">
+        <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-12">
+          <div className="space-y-4 max-w-2xl">
+            <h2 className="text-3xl md:text-5xl font-bold">Featured <span className="gradient-text">Projects</span></h2>
+            <p className="text-muted-foreground">A collection of technical solutions and creative works from competitions and independent research.</p>
+          </div>
+          <Button variant="outline" size="sm" className="rounded-full" asChild>
+            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+              <Github className="mr-2 h-4 w-4" />
+              View GitHub
+            </a>
+          </Button>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {portfolioData.projects.map((project) => (
+            <Card key={project.id} className="glass-card flex flex-col group overflow-hidden h-full">
+              <div className="relative h-48 w-full overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.title}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform duration-500"
+                  data-ai-hint="technology project"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-4">
+                  <Button size="icon" variant="secondary" className="rounded-full">
+                    <Github className="h-5 w-5" />
+                  </Button>
+                  <Button size="icon" variant="primary" className="rounded-full">
+                    <ExternalLink className="h-5 w-5" />
+                  </Button>
+                </div>
+              </div>
+              
+              <CardHeader className="p-6 pb-0">
+                <div className="flex justify-between items-start mb-2">
+                  <h3 className="text-xl font-bold group-hover:text-primary transition-colors">{project.title}</h3>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {project.tags.map(tag => (
+                    <Badge key={tag} variant="secondary" className="text-[10px] uppercase font-bold">{tag}</Badge>
+                  ))}
+                </div>
+              </CardHeader>
+              
+              <CardContent className="p-6 flex-grow">
+                <p className="text-sm text-muted-foreground line-clamp-3">
+                  {summaries[project.id] || project.description}
+                </p>
+                
+                {!summaries[project.id] && (
+                  <button
+                    onClick={() => handleSummarize(project.id, project.description)}
+                    disabled={loading[project.id]}
+                    className="mt-4 flex items-center text-xs font-bold text-primary hover:underline disabled:opacity-50"
+                  >
+                    <Sparkles className="mr-1 h-3 w-3" />
+                    {loading[project.id] ? "Summarizing..." : "AI Summarize"}
+                  </button>
+                )}
+              </CardContent>
+              
+              <CardFooter className="p-6 pt-0 border-t flex justify-between items-center">
+                <span className="text-xs font-medium text-muted-foreground uppercase tracking-widest">Project Details</span>
+                <Button variant="ghost" size="icon">
+                  <ArrowRight className="h-4 w-4" />
+                </Button>
+              </CardFooter>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ArrowRight(props: React.SVGProps<SVGSVGElement>) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h14" />
+      <path d="m12 5 7 7-7 7" />
+    </svg>
+  );
+}
