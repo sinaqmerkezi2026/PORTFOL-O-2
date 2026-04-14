@@ -47,7 +47,7 @@ export function Navbar() {
     )}>
       <div className="container mx-auto px-6 md:px-12 flex items-center justify-between">
         <a href="#" className="text-xl font-bold tracking-tighter gradient-text">
-          NİCAT.P
+          Nicat Huseynli
         </a>
 
         {/* Desktop Nav */}
