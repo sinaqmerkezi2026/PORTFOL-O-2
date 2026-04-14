@@ -4,6 +4,7 @@
 import { portfolioData } from '@/app/lib/data';
 import { Trophy, Award, Star, Binary, Code2, Hammer } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import Image from 'next/image';
 
 export function Achievements() {
   const categories = ["All", "Hackathons", "Programming", "Making"];
@@ -44,17 +45,28 @@ export function Achievements() {
                   .map((achievement, idx) => (
                     <div 
                       key={idx} 
-                      className="group relative flex gap-6 md:gap-12 p-6 md:p-10 rounded-3xl border border-border bg-secondary/20 hover:border-primary/50 hover:bg-secondary/40 transition-all duration-300"
+                      className="group relative flex flex-col md:flex-row gap-6 md:gap-12 p-6 md:p-10 rounded-3xl border border-border bg-secondary/20 hover:border-primary/50 hover:bg-secondary/40 transition-all duration-300"
                     >
-                      <div className="flex-shrink-0">
-                        <div className="w-16 h-16 md:w-20 md:h-20 bg-background border-2 border-primary/20 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
-                          {getIcon(achievement.category)}
-                        </div>
+                      <div className="flex-shrink-0 flex items-center justify-center">
+                        {achievement.image ? (
+                           <div className="relative w-24 h-24 md:w-32 md:h-32 rounded-2xl overflow-hidden border-2 border-primary/20 group-hover:scale-105 transition-transform duration-500">
+                             <Image 
+                               src={achievement.image}
+                               alt={achievement.title}
+                               fill
+                               className="object-cover"
+                             />
+                           </div>
+                        ) : (
+                          <div className="w-16 h-16 md:w-20 md:h-20 bg-background border-2 border-primary/20 rounded-2xl flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-500">
+                            {getIcon(achievement.category)}
+                          </div>
+                        )}
                       </div>
                       
-                      <div className="space-y-3">
+                      <div className="flex-grow space-y-3 text-center md:text-left">
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-2">
-                          <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full w-fit">
+                          <span className="text-xs font-bold text-primary bg-primary/10 px-3 py-1 rounded-full w-fit mx-auto md:mx-0">
                             {achievement.year}
                           </span>
                           <span className="text-xs font-medium text-muted-foreground italic">

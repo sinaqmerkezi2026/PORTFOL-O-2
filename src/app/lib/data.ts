@@ -60,7 +60,7 @@ export const portfolioData = {
       category: "Hackathons",
       description: "Selected among top finalists from ~300,000 participants. Developed a mountain tourism platform with booking and coupon systems.",
       organization: "Ministry of Science and Education",
-      image: "https://www.image2url.com/r2/default/images/1776166137668-a8807881-bcff-47e1-a85d-31901ca15ef0.png"
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Hackathon-1.png"
     },
     {
       year: "2025",
@@ -142,21 +142,21 @@ export const portfolioData = {
       title: "Microsoft Cybersecurity and Privacy",
       category: "Coursera",
       description: "Certification covering foundational cybersecurity principles and privacy protections.",
-      image: "https://drive.google.com/uc?export=view&id=1ESo_7QNj8xIjRqm0Mm8ThERUe3TZxS85"
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Coursera_Microsoft-1.png"
     },
     {
       id: "c-vandy-openai",
       title: "Vanderbilt: OpenAI GPTs & AI Assistants",
       category: "Coursera",
       description: "Building custom AI assistants and leveraging OpenAI's advanced GPT models.",
-      image: "https://drive.google.com/uc?export=view&id=1mjHS3rbYrNY08oThuyNXD7TZxRlC1deG"
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Vanderbilt%20University_Coursera-1.png"
     },
     {
       id: "c-upenn-stem",
       title: "English for STEM - University of Pennsylvania",
       category: "Education",
       description: "Professional English proficiency in Science, Technology, Engineering, and Mathematics.",
-      image: "https://drive.google.com/uc?export=view&id=1kiv-lg8bb3OSmeSO4jGWV5VL6TipqkJS"
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Coursera_University_of_Pennsylvania-1.png"
     },
     {
       id: "c1",
