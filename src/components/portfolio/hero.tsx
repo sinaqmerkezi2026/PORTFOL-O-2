@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useEffect, useState } from 'react';
@@ -100,13 +99,6 @@ export function Hero() {
                         <div className="text-6xl font-black gradient-text">NH</div>
                     </div>
                    )}
-                   
-                   <div className="absolute top-10 right-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[3s] z-20">
-                      <div className="text-primary font-bold">C++</div>
-                   </div>
-                   <div className="absolute bottom-10 left-10 p-4 bg-background border rounded-2xl shadow-2xl animate-bounce duration-[4s] delay-700 z-20">
-                      <div className="text-accent font-bold">SAF Winner</div>
-                   </div>
                 </div>
              </div>
           </div>
