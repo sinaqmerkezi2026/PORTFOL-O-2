@@ -59,6 +59,12 @@ const nextConfig: NextConfig = {
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'plain-eeur-prod-public.komododecks.com',
+        port: '',
+        pathname: '/**',
+      },
     ],
   },
 };
