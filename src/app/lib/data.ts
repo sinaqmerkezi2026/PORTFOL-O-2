@@ -64,7 +64,7 @@ export const portfolioData = {
       image: "https://plain-eeur-prod-public.komododecks.com/202605/14/ndDeFa9q8R7wydEEf1FE/image.jpg"
     },
     {
-      year: "2025",
+      year: "2026",
       title: "F1 Volunteer Registration",
       category: "Volunteer",
       description: "Successfully registered as a volunteer for the Formula 1 Azerbaijan Grand Prix, ready to contribute to one of the world's most prestigious sporting events.",
