@@ -58,8 +58,9 @@ export const portfolioData = {
       year: "2026",
       title: "Metro Hackathon",
       category: "Hackathons",
-      description: "Registered participant for the upcoming official Baku Metro hackathon focusing on innovative transit and infrastructure solutions (May 1-3, 2026).",
-      organization: "\"Bakı Metropoliteni\" QSC"
+      description: "Being the only school student among 1201 applicants. Registered participant for the upcoming official Baku Metro hackathon focusing on innovative transit and infrastructure solutions (May 1-3, 2026).",
+      organization: "\"Bakı Metropoliteni\" QSC",
+      image: "https://media.licdn.com/dms/image/v2/D4D22AQFi-FQC57HO3A/feedshare-image-high-res/B4DZ3vX6drI0AU-/0/1777837517139?e=1780531200&v=beta&t=NgL-6WfHLu1vNCKB9rb7Y9Gmpxv4M5ThLQ2HZuQeGSw"
     },
     {
       year: "2025",
@@ -91,7 +92,7 @@ export const portfolioData = {
       category: "Making",
       description: "2nd place winner for technical innovation in satellite prototyping.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQE0IkkQY_92iQ/feedshare-shrink_1280/B4EZqhjOPCHEAs-/0/1763646958825?e=1780531200&v=beta&t=9K1e_diTWTcN55_WhLMO6BbRQhwPLa9XMinQnKHx5vc"
     },
     {
       year: "2023",
@@ -99,7 +100,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Built a custom 3D-printed surface watercraft.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716203526194?e=1777507200&v=beta&t=wnhk58DI6pCYuWKuhSoNcW3sbB-mFu1O1ehD1YYFwCU"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0"
     },
     {
       year: "2022",
@@ -107,7 +108,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Developed an educational drone focused on flight control electronics.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ"
     }
   ],
   projects: [
@@ -115,21 +116,21 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQE0IkkQY_92iQ/feedshare-shrink_1280/B4EZqhjOPCHEAs-/0/1763646958825?e=1780531200&v=beta&t=9K1e_diTWTcN55_WhLMO6BbRQhwPLa9XMinQnKHx5vc",
       tags: ["C++", "Aerospace", "IoT"]
     },
     {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716203526194?e=1777507200&v=beta&t=wnhk58DI6pCYuWKuhSoNcW3sbB-mFu1O1ehD1YYFwCU",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
     {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_2048_1536/feedshare-shrink_2048_1536/0/1716204025584?e=1777507200&v=beta&t=iCKCto6KE4cVHPdZyvbDIVjBUNhDf7ji-Q_cgHEQaVQ",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ",
       tags: ["Robotics", "Engineering", "C++"]
     }
   ],
