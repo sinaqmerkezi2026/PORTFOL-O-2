@@ -76,7 +76,7 @@ export const portfolioData = {
       category: "Academic",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
       organization: "Hədəf Kursları",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
     },
     {
       year: "2023",
@@ -180,21 +180,21 @@ export const portfolioData = {
       title: "Deneyap Technology Laboratories",
       category: "Education",
       description: "3-year scholarship program completion in high-tech fields including robotics and coding.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEftN5uICOKyw/feedshare-shrink_1280/B4EZo5rEUkKgAs-/0/1761904184340?e=1777507200&v=beta&t=ZYlyBmx-7XsUvFumYJhzrpbGbizdH1028_IXw686ET8"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/oPCjQs5e10ukxvyZsOIo/image.jpg"
     },
     {
       id: "c2",
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Academic",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
     },
     {
       id: "c4",
       title: "Technest Cybersecurity Program",
       category: "Education",
       description: "Intensive cybersecurity training provided by Techspace Azerbaijan.",
-      image: "https://media.licdn.com/dms/image/v2/D5622AQEQPzHGw6ysHQ/feedshare-shrink_800/feedshare-shrink_800/0/1729621553221?e=1777507200&v=beta&t=Gi-trhawojBf5NZVCfRZWvQbt5h0BQhQ6ay7uPvxIPo"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/eH6Civ802JjKHjEm3cL9/image.jpg"
     },
     {
       id: "c-code-more",
