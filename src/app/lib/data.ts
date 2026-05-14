@@ -13,7 +13,8 @@ export const portfolioData = {
     instagram: "https://www.instagram.com/nijathuseynli",
     cvLink: "https://drive.google.com/file/d/1EuWEgXM0d0iBd2wjq3d3X7XFojEeE5ZF/view?usp=sharing",
     education: "Secondary School No. 204",
-    location: "Baku, Azerbaijan"
+    location: "Baku, Azerbaijan",
+    profileImage: "https://plain-eeur-prod-public.komododecks.com/202605/14/NQie1LzF6pudwl2JEECo/image.jpg"
   },
   skills: {
     technical: [
@@ -108,7 +109,7 @@ export const portfolioData = {
       category: "Programming",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/rJDWxp3PxjIPXytJ6CMy/image.jpg"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1780531200&v=beta&t=90XpO8X7t_ZgMCufjolv1lEXWaHHw8hbZns7_Y8E1a8"
     },
     {
       year: "2025",

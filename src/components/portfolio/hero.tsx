@@ -2,12 +2,13 @@
 "use client";
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/app/lib/data';
-import { ArrowRight, Code, Trophy, Shield, FileText, User } from 'lucide-react';
+import { ArrowRight, Code, Trophy, Shield, FileText } from 'lucide-react';
 
 export function Hero() {
-  const { name, title, profession, cvLink } = portfolioData.personalInfo;
+  const { name, title, profession, cvLink, profileImage } = portfolioData.personalInfo;
   const [professionIndex, setProfessionIndex] = useState(0);
 
   useEffect(() => {
@@ -78,17 +79,22 @@ export function Hero() {
 
         <div className="hidden lg:flex justify-center items-center animate-in zoom-in duration-1000">
           <div className="relative w-[450px] h-[450px]">
-             {/* Floating elements animation decoration */}
-             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/20 flex items-center justify-center p-8 overflow-hidden">
-                <div className="w-full h-full bg-secondary/50 rounded-full flex items-center justify-center relative overflow-hidden">
-                   <div className="flex flex-col items-center justify-center space-y-4">
-                      <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center text-primary">
-                        <User className="w-24 h-24" />
-                      </div>
-                      <div className="text-center">
+             {/* Profile Image container */}
+             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/20 flex items-center justify-center p-4 overflow-hidden">
+                <div className="w-full h-full rounded-full overflow-hidden border-4 border-primary/20 relative">
+                   {profileImage ? (
+                     <Image 
+                       src={profileImage}
+                       alt={name}
+                       fill
+                       className="object-cover"
+                       priority
+                     />
+                   ) : (
+                     <div className="w-full h-full bg-secondary/50 flex items-center justify-center">
                         <div className="text-4xl font-black gradient-text">NH</div>
-                      </div>
-                   </div>
+                     </div>
+                   )}
                 </div>
              </div>
           </div>
