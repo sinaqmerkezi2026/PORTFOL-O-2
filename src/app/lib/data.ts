@@ -76,7 +76,7 @@ export const portfolioData = {
       category: "Academic",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
       organization: "Hədəf Kursları",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       year: "2023",
@@ -108,7 +108,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Built a custom 3D-printed surface watercraft.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/EcL3iGtPj9AOI0nxLBox/image.jpg"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0"
     },
     {
       year: "2022",
@@ -116,7 +116,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Developed an educational drone focused on flight control electronics.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RezJzh4Rr2K14akHNNf7/image.jpg"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ"
     }
   ],
   projects: [
@@ -131,14 +131,14 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category.",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/EcL3iGtPj9AOI0nxLBox/image.jpg",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
     {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RezJzh4Rr2K14akHNNf7/image.jpg",
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ",
       tags: ["Robotics", "Engineering", "C++"]
     }
   ],
@@ -159,7 +159,7 @@ export const portfolioData = {
       title: "Microsoft Cybersecurity and Privacy",
       category: "Coursera",
       description: "Certification covering foundational cybersecurity principles and privacy protections.",
-      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Coursera_Microsoft-1.png"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/CkjdZLGSBwthYR5gjccj/image.jpg"
     },
     {
       id: "c-vandy-openai",
@@ -187,7 +187,7 @@ export const portfolioData = {
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Academic",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       id: "c4",
