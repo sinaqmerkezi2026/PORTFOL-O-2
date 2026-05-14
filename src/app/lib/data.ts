@@ -219,6 +219,55 @@ export const portfolioData = {
       category: "Education",
       description: "Electronics training program completion under Technest Scholarship Program.",
       image: "https://plain-eeur-prod-public.komododecks.com/202605/14/96b1BHIHr7w7lnIb31GK/image.jpg"
+    },
+    {
+      id: "c-spring-camp",
+      title: "Spring Camp for Student Volunteers",
+      category: "Volunteer",
+      description: "Training and leadership development at the Bir Könüllü spring camp.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/13K9UEswVihQkTb8Zn62/image.jpg"
+    },
+    {
+      id: "c-math-borders",
+      title: "Mathematicians Without Borders",
+      category: "Academic",
+      description: "Participation and analytical achievements in mathematics at ADA University.",
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/ADA.png"
+    },
+    {
+      id: "c-hackathon",
+      title: "National Inter-School Hackathon",
+      category: "Hackathons",
+      description: "Finalist certificate for developing an innovative mountain tourism platform.",
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Hackathon-1.png"
+    },
+    {
+      id: "c-azercell",
+      title: "AzercellCup Programming Olympiad",
+      category: "Programming",
+      description: "National first place certificate in C++ programming.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/rJDWxp3PxjIPXytJ6CMy/image.jpg"
+    },
+    {
+      id: "c-saf2025",
+      title: "SAF 2025 — CubeSat Category",
+      category: "Making",
+      description: "Certificate for 2nd place in space systems prototyping.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/T1vQq2I8REODBsFy0dJ5/image.png"
+    },
+    {
+      id: "c-saf2023",
+      title: "SAF 2023 — Boat Racing",
+      category: "Making",
+      description: "Certificate for 3rd place in technical boat design and racing.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/EcL3iGtPj9AOI0nxLBox/image.jpg"
+    },
+    {
+      id: "c-saf2022",
+      title: "SAF 2022 — Edu Drone",
+      category: "Making",
+      description: "Certificate for 3rd place in educational drone engineering.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RezJzh4Rr2K14akHNNf7/image.jpg"
     }
   ],
   volunteering: [

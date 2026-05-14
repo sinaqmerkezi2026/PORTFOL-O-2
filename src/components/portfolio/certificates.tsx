@@ -30,6 +30,7 @@ export function Certificates() {
       image: doc.image,
       category: (doc as any).category || "Education"
     })) || [];
+    // Combine Firestore certs with local ones
     return [...firestoreCerts, ...portfolioData.certificates];
   }, [dbCerts]);
 
