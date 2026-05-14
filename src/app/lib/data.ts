@@ -48,6 +48,14 @@ export const portfolioData = {
   ],
   achievements: [
     {
+      year: "2024",
+      title: "IDDA CUP",
+      category: "Programming",
+      description: "On April 27, 2024, I participated in the final round of the C++ programming competition organized by the Innovation and Digital Development Agency and the Technest Scholarship Program",
+      organization: "Innovation and Digital Development Agency | Technest",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/OoBSE4Ec302hw3Ts1eQH/image.jpg"
+    },
+    {
       year: "2025",
       title: "F1 Volunteer Registration",
       category: "Volunteer",
@@ -171,6 +179,13 @@ export const portfolioData = {
     }
   ],
   certificates: [
+    {
+      id: "c-idda-cup",
+      title: "IDDA CUP",
+      category: "Programming",
+      description: "Final round participant in the C++ programming competition organized by IDDA and Technest (April 27, 2024).",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/OoBSE4Ec302hw3Ts1eQH/image.jpg"
+    },
     {
       id: "c-ms-cyber",
       title: "Microsoft Cybersecurity and Privacy",
