@@ -3,7 +3,7 @@ import { PlaceHolderImages } from './placeholder-images';
 
 export const portfolioData = {
   personalInfo: {
-    name: "NİCAT HUSEYNLİ",
+    name: "NİCAT HUSEYNLI",
     title: "S T U D E N T",
     profession: ["Founder of Sınaq Mərkəzi", "Student Developer", "C++ Programmer", "Competition Participant"],
     aboutMe: "I am an active volunteer with strong teamwork and communication skills, experienced in dynamic environments. I have a background in programming and cybersecurity, along with achievements such as being a 3-time STEAM competition winner. I am responsible, adaptable, and always eager to learn and contribute effectively.",
@@ -60,7 +60,7 @@ export const portfolioData = {
       category: "Volunteer",
       description: "From April 25 to 27, I participated in the spring camp for student volunteers organized by the Bir Könüllü student organization, the Institute of Education of the Republic of Azerbaijan, and the STEAM Azerbaijan project. During the camp, I enhanced my knowledge and skills through various educational trainings, made new friends, and gained valuable experiences. At the end, our team was awarded First Place in the intellectual game \"What? Where? When?\" held among the participants🥇",
       organization: "One Volunteer | Ministry of Education",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/T1vQq2I8REODBsFy0dJ5/image.png"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/13K9UEswVihQkTb8Zn62/image.jpg"
     },
     {
       year: "2026",
@@ -92,7 +92,7 @@ export const portfolioData = {
       category: "Academic",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
       organization: "Hədəf Kursları",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RZ2Uc57o0P56WJRRysPD/image.png"
     },
     {
       year: "2023",
@@ -116,7 +116,7 @@ export const portfolioData = {
       category: "Making",
       description: "2nd place winner for technical innovation in satellite prototyping.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/T1vQq2I8REODBsFy0dJ5/image.png"
     },
     {
       year: "2023",
@@ -140,7 +140,7 @@ export const portfolioData = {
       id: "p-saf-2025",
       title: "SAF 2025 — CubeSat Engineering",
       description: "Developing space systems engineering models for CubeSat category at SAF 2025. Awarded 2nd place for technical innovation.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQE0IkkQY_92iQ/feedshare-shrink_1280/B4EZqhjOPCHEAs-/0/1763646958825?e=1780531200&v=beta&t=9K1e_diTWTcN55_WhLMO6BbRQhwPLa9XMinQnKHx5vc",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/T1vQq2I8REODBsFy0dJ5/image.png",
       tags: ["C++", "Aerospace", "IoT"]
     },
     {
@@ -203,7 +203,7 @@ export const portfolioData = {
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Academic",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RZ2Uc57o0P56WJRRysPD/image.png"
     },
     {
       id: "c4",
