@@ -76,7 +76,7 @@ export const portfolioData = {
       category: "Academic",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
       organization: "Hədəf Kursları",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       year: "2023",
@@ -92,7 +92,7 @@ export const portfolioData = {
       category: "Programming",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1780531200&v=beta&t=90XpO8X7t_ZgMCufjolv1lEXWaHHw8hbZns7_Y8E1a8"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/rJDWxp3PxjIPXytJ6CMy/image.jpg"
     },
     {
       year: "2025",
@@ -100,7 +100,7 @@ export const portfolioData = {
       category: "Making",
       description: "2nd place winner for technical innovation in satellite prototyping.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQE0IkkQY_92iQ/feedshare-shrink_1280/B4EZqhjOPCHEAs-/0/1763646958825?e=1780531200&v=beta&t=9K1e_diTWTcN55_WhLMO6BbRQhwPLa9XMinQnKHx5vc"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF0tndOot7tTQ/feedshare-shrink_1280/B4EZqhjOSGHcA0-/0/1763646959516?e=1777507200&v=beta&t=6yJ6fdvQDljmf1TFi6OhpYT9EQODSL7GNP8UKvkP1no"
     },
     {
       year: "2023",
@@ -108,7 +108,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Built a custom 3D-printed surface watercraft.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/EcL3iGtPj9AOI0nxLBox/image.jpg"
     },
     {
       year: "2022",
@@ -116,7 +116,7 @@ export const portfolioData = {
       category: "Making",
       description: "3rd place winner. Developed an educational drone focused on flight control electronics.",
       organization: "International Steam Azerbaijan Festival",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RezJzh4Rr2K14akHNNf7/image.jpg"
     }
   ],
   projects: [
@@ -131,14 +131,14 @@ export const portfolioData = {
       id: "p-saf-2023",
       title: "SAF 2023 — Boat Racing",
       description: "Built a custom 3D-printed surface watercraft with integrated electronics. Secured 3rd place in the Boat Racing category.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQGRpbQfzpdY-Q/feedshare-shrink_800/feedshare-shrink_800/0/1716203526122?e=1780531200&v=beta&t=3M7gln8nWX0hke25oftVc7UZfi7GSbMSF0iYb82L4r0",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/EcL3iGtPj9AOI0nxLBox/image.jpg",
       tags: ["Electronics", "Robotics", "3D Printing"]
     },
     {
       id: "p-saf-2022",
       title: "SAF 2022 — Edu Drone",
       description: "Developed an educational drone-based project focused on flight control electronics and aerodynamic engineering. 3rd place winner.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQFN-V-EHFTYAw/feedshare-shrink_800/feedshare-shrink_800/0/1716204025578?e=1780531200&v=beta&t=CGQZEUdC5te6UWFIlDoLEdredYl24qTpE95IH8RoCRQ",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/RezJzh4Rr2K14akHNNf7/image.jpg",
       tags: ["Robotics", "Engineering", "C++"]
     }
   ],
@@ -187,7 +187,7 @@ export const portfolioData = {
       title: "2nd Turkic Integration Olympiad (TIO)",
       category: "Academic",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
     },
     {
       id: "c4",
@@ -195,6 +195,13 @@ export const portfolioData = {
       category: "Education",
       description: "Intensive cybersecurity training provided by Techspace Azerbaijan.",
       image: "https://media.licdn.com/dms/image/v2/D5622AQEQPzHGw6ysHQ/feedshare-shrink_800/feedshare-shrink_800/0/1729621553221?e=1777507200&v=beta&t=Gi-trhawojBf5NZVCfRZWvQbt5h0BQhQ6ay7uPvxIPo"
+    },
+    {
+      id: "c-code-more",
+      title: "Code&More Electronics Training",
+      category: "Education",
+      description: "Electronics training program completion under Technest Scholarship Program.",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/96b1BHIHr7w7lnIb31GK/image.jpg"
     }
   ],
   volunteering: [
