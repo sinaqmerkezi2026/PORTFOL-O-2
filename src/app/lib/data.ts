@@ -48,6 +48,14 @@ export const portfolioData = {
   achievements: [
     {
       year: "2025",
+      title: "F1 Volunteer Registration",
+      category: "Volunteer",
+      description: "Successfully registered as a volunteer for the Formula 1 Azerbaijan Grand Prix, ready to contribute to one of the world's most prestigious sporting events.",
+      organization: "Formula 1 | Baku City Circuit",
+      image: null
+    },
+    {
+      year: "2025",
       title: "Spring Camp for Student Volunteers",
       category: "Volunteer",
       description: "From April 25 to 27, I participated in the spring camp for student volunteers organized by the Bir Könüllü student organization, the Institute of Education of the Republic of Azerbaijan, and the STEAM Azerbaijan project. During the camp, I enhanced my knowledge and skills through various educational trainings, made new friends, and gained valuable experiences. At the end, our team was awarded First Place in the intellectual game \"What? Where? When?\" held among the participants🥇",

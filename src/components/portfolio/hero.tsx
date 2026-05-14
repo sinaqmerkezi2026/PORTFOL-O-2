@@ -1,17 +1,14 @@
+
 "use client";
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { portfolioData } from '@/app/lib/data';
-import { PlaceHolderImages } from '@/app/lib/placeholder-images';
-import { ArrowRight, Code, Trophy, Shield, FileText } from 'lucide-react';
+import { ArrowRight, Code, Trophy, Shield, FileText, User } from 'lucide-react';
 
 export function Hero() {
   const { name, title, profession, cvLink } = portfolioData.personalInfo;
   const [professionIndex, setProfessionIndex] = useState(0);
-
-  const avatarImage = PlaceHolderImages.find(img => img.id === 'avatar')?.imageUrl || "";
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -84,21 +81,14 @@ export function Hero() {
              {/* Floating elements animation decoration */}
              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-full border border-primary/20 flex items-center justify-center p-8 overflow-hidden">
                 <div className="w-full h-full bg-secondary/50 rounded-full flex items-center justify-center relative overflow-hidden">
-                   {avatarImage ? (
-                     <div className="absolute inset-0 w-full h-full">
-                       <Image 
-                         src={avatarImage}
-                         alt={name}
-                         fill
-                         className="object-cover"
-                         priority
-                       />
-                     </div>
-                   ) : (
-                    <div className="text-center">
-                        <div className="text-6xl font-black gradient-text">NH</div>
-                    </div>
-                   )}
+                   <div className="flex flex-col items-center justify-center space-y-4">
+                      <div className="w-48 h-48 bg-primary/20 rounded-full flex items-center justify-center text-primary">
+                        <User className="w-24 h-24" />
+                      </div>
+                      <div className="text-center">
+                        <div className="text-4xl font-black gradient-text">NH</div>
+                      </div>
+                   </div>
                 </div>
              </div>
           </div>
