@@ -40,7 +40,7 @@
     {
       "id": "cert-tio",
       "description": "Türk Integration Olympiad Certificate",
-      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_2048_1536/B4EZb7NQvuGcAo-/0/1747971285874?e=1777507200&v=beta&t=Z5n63_iFq5NzZCT-orBVHCEmaaIIH9N_fi5JlYfVdrU",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY",
       "imageHint": "olympiad medal"
     },
     {
@@ -58,14 +58,8 @@
     {
       "id": "cert-azercell",
       "description": "Azercell Cup Programming Olympiad Certificate",
-      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc",
+      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1780531200&v=beta&t=90XpO8X7t_ZgMCufjolv1lEXWaHHw8hbZns7_Y8E1a8",
       "imageHint": "programming award"
-    },
-    {
-      "id": "cert-cybersummer",
-      "description": "Cyber Summer School 2023 Certificate",
-      "imageUrl": "https://media.licdn.com/dms/image/v2/D4E22AQEsjuY6ZvN4_A/feedshare-shrink_800/feedshare-shrink_800/0/1716203028002?e=1777507200&v=beta&t=X0-vjk5SgsiBHjUHpcThRyS6A_11sn_y7lDFTguthg8",
-      "imageHint": "cybersecurity summer school"
     },
     {
       "id": "avatar",

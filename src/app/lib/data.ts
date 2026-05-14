@@ -73,10 +73,18 @@ export const portfolioData = {
     {
       year: "2025",
       title: "2nd Turkic Integration Olympiad (TIO)",
-      category: "Programming",
+      category: "Academic",
       description: "Silver Medal winner. Integrated competition covering multiple sciences among Turkic states.",
       organization: "Hədəf Kursları",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
+    },
+    {
+      year: "2023",
+      title: "Respublika fənn olimpiadaları (RFO) 2023 Finalçı",
+      category: "Programming",
+      description: "National Subject Olympiad Finalist in Informatics (C++ Programming).",
+      organization: "Ministry of Science and Education",
+      image: "https://picsum.photos/seed/rfo/600/400"
     },
     {
       year: "2023",
@@ -84,7 +92,7 @@ export const portfolioData = {
       category: "Programming",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1777507200&v=beta&t=O8kEiLij6GjGe4j_H-ulpAlxlgwMTxQoEre9cQTBqLc"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1780531200&v=beta&t=90XpO8X7t_ZgMCufjolv1lEXWaHHw8hbZns7_Y8E1a8"
     },
     {
       year: "2025",
@@ -177,9 +185,9 @@ export const portfolioData = {
     {
       id: "c2",
       title: "2nd Turkic Integration Olympiad (TIO)",
-      category: "Programming",
+      category: "Academic",
       description: "Silver medal recognition for excellence in interdisciplinary sciences.",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQHgt_FAQpqbCQ/feedshare-shrink_800/B4EZb7NQv.HIAk-/0/1747971287612?e=1777507200&v=beta&t=XC72uY6FABhMpnjVT-gZRbL2jY8jRfHKCFlOSWJsCbE"
+      image: "https://media.licdn.com/dms/image/v2/D4E22AQEvIoR1njSqTw/feedshare-shrink_800/B4EZb7NQvuGcAg-/0/1747971285673?e=1780531200&v=beta&t=9JSqJ8Ebuyqg7NYZtMztsamU6EhNcOqvElgK6aNkXZY"
     },
     {
       id: "c4",
