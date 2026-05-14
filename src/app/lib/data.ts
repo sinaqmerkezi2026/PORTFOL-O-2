@@ -48,11 +48,11 @@ export const portfolioData = {
   achievements: [
     {
       year: "2025",
-      title: "Mathematicians Without Borders",
-      category: "Academic",
-      description: "Participated in the specialized mathematics classes held by ADA University (May 19-21-23, 2025), focusing on advanced analytical problem-solving.",
-      organization: "ADA University",
-      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/ADA.png"
+      title: "Spring Camp for Student Volunteers",
+      category: "Volunteer",
+      description: "From April 25 to 27, I participated in the spring camp for student volunteers organized by the Bir Könüllü student organization, the Institute of Education of the Republic of Azerbaijan, and the STEAM Azerbaijan project. During the camp, I enhanced my knowledge and skills through various educational trainings, made new friends, and gained valuable experiences. At the end, our team was awarded First Place in the intellectual game \"What? Where? When?\" held among the participants🥇",
+      organization: "One Volunteer | Ministry of Education",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/T1vQq2I8REODBsFy0dJ5/image.png"
     },
     {
       year: "2026",
@@ -64,11 +64,11 @@ export const portfolioData = {
     },
     {
       year: "2025",
-      title: "Spring Camp for Student Volunteers",
-      category: "Volunteer",
-      description: "From April 25 to 27, I participated in the spring camp for student volunteers organized by the Bir Könüllü student organization, the Institute of Education of the Republic of Azerbaijan, and the STEAM Azerbaijan project. During the camp, I enhanced my knowledge and skills through various educational trainings, made new friends, and gained valuable experiences. At the end, our team was awarded First Place in the intellectual game \"What? Where? When?\" held among the participants🥇",
-      organization: "One Volunteer | Ministry of Education",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/13K9UEswVihQkTb8Zn62/image.jpg"
+      title: "Mathematicians Without Borders",
+      category: "Academic",
+      description: "Participated in the specialized mathematics classes held by ADA University (May 19-21-23, 2025), focusing on advanced analytical problem-solving.",
+      organization: "ADA University",
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/ADA.png"
     },
     {
       year: "2025",
