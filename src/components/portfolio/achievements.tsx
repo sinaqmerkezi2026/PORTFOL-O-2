@@ -2,17 +2,18 @@
 "use client";
 
 import { portfolioData } from '@/app/lib/data';
-import { Trophy, Award, Star, Binary, Code2, Hammer, School } from 'lucide-react';
+import { Trophy, Award, Star, Binary, Code2, Hammer, School, Users } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import Image from 'next/image';
 
 export function Achievements() {
-  const categories = ["All", "Hackathons", "Programming", "Making", "Academic"];
+  const categories = ["All", "Hackathons", "Volunteer", "Programming", "Making", "Academic"];
 
   const getIcon = (category: string) => {
     switch (category) {
       case "Programming": return <Code2 className="w-8 h-8 md:w-10 md:h-10" />;
       case "Hackathons": return <Code2 className="w-8 h-8 md:w-10 md:h-10" />;
+      case "Volunteer": return <Users className="w-8 h-8 md:w-10 md:h-10" />;
       case "Making": return <Hammer className="w-8 h-8 md:w-10 md:h-10" />;
       case "Academic": return <School className="w-8 h-8 md:w-10 md:h-10" />;
       default: return <Trophy className="w-8 h-8 md:w-10 md:h-10" />;
