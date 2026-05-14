@@ -56,6 +56,14 @@ export const portfolioData = {
       image: "https://plain-eeur-prod-public.komododecks.com/202605/14/OoBSE4Ec302hw3Ts1eQH/image.jpg"
     },
     {
+      year: "2023",
+      title: "Cyber Summer School – 2023",
+      category: "Academic",
+      description: "From July 24 to July 29, 2023, I participated in the international summer school \"Cyber Summer School – 2023\" organized in cooperation between the Azerbaijan Cybersecurity Organizations Association and the State Security Service",
+      organization: "ACOA | State Security Service",
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/ndDeFa9q8R7wydEEf1FE/image.jpg"
+    },
+    {
       year: "2025",
       title: "F1 Volunteer Registration",
       category: "Volunteer",
