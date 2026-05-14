@@ -39,7 +39,7 @@ export function Certificates() {
         <div className="flex flex-col md:flex-row justify-between items-end gap-6 mb-16">
           <div className="space-y-4 max-w-2xl">
             <h2 className="text-3xl md:text-5xl font-bold">Certifications & <span className="gradient-text">Badges</span></h2>
-            <p className="text-muted-foreground">Official recognitions of skill mastery from top universities and global platforms like Microsoft, Coursera, and Technest.</p>
+            <p className="text-muted-foreground">Official recognitions of skill mastery from top universities and global platforms.</p>
           </div>
         </div>
 
@@ -57,7 +57,7 @@ export function Certificates() {
                         alt={cert.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500 opacity-80 group-hover:opacity-100"
-                        unoptimized={cert.image.includes('drive.google.com')}
+                        unoptimized={cert.image.includes('drive.google.com') || cert.image.includes('raw.githubusercontent.com')}
                       />
                       <div className="absolute inset-0 bg-background/20 group-hover:bg-transparent transition-all flex items-center justify-center">
                         <div className="bg-background/80 p-2 rounded-full transform translate-y-10 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -70,9 +70,6 @@ export function Certificates() {
                         <h3 className="font-bold text-lg leading-tight group-hover:text-primary transition-colors">{cert.title}</h3>
                       </div>
                       <p className="text-sm text-muted-foreground line-clamp-2 flex-grow">{cert.description}</p>
-                      <span className="mt-4 inline-block w-fit text-[10px] font-black uppercase tracking-tighter text-accent bg-accent/10 px-2 py-0.5 rounded">
-                        {cert.category}
-                      </span>
                     </CardContent>
                   </Card>
                 </DialogTrigger>
@@ -88,7 +85,7 @@ export function Certificates() {
                           alt={cert.title}
                           fill
                           className="object-contain"
-                          unoptimized={cert.image.includes('drive.google.com')}
+                          unoptimized={cert.image.includes('drive.google.com') || cert.image.includes('raw.githubusercontent.com')}
                         />
                      </div>
                   </ScrollArea>

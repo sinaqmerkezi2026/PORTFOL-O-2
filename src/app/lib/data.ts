@@ -183,7 +183,7 @@ export const portfolioData = {
       title: "Vanderbilt: OpenAI GPTs & AI Assistants",
       category: "Coursera",
       description: "Building custom AI assistants and leveraging OpenAI's advanced GPT models.",
-      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Vanderbilt%20University_Coursera-1.png"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/lCHQgRt5tdHsNFodcfbd/image.png"
     },
     {
       id: "c-upenn-stem",
