@@ -109,7 +109,7 @@ export const portfolioData = {
       category: "Programming",
       description: "1st place nationwide in C++ programming.",
       organization: "Azercell | Ministry of Science and Education",
-      image: "https://media.licdn.com/dms/image/v2/D4E22AQF7WRSlRv0f-w/feedshare-shrink_800/feedshare-shrink_800/0/1716203896840?e=1780531200&v=beta&t=90XpO8X7t_ZgMCufjolv1lEXWaHHw8hbZns7_Y8E1a8"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/rJDWxp3PxjIPXytJ6CMy/image.jpg"
     },
     {
       year: "2025",
@@ -176,7 +176,7 @@ export const portfolioData = {
       title: "Microsoft Cybersecurity and Privacy",
       category: "Coursera",
       description: "Certification covering foundational cybersecurity principles and privacy protections.",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/CkjdZLGSBwthYR5gjccj/image.jpg"
+      image: "https://raw.githubusercontent.com/sinaqmerkezi2026/Nicat_Huseynli/refs/heads/main/Coursera_Microsoft-1.png"
     },
     {
       id: "c-vandy-openai",
@@ -197,7 +197,7 @@ export const portfolioData = {
       title: "Deneyap Technology Laboratories",
       category: "Education",
       description: "3-year scholarship program completion in high-tech fields including robotics and coding.",
-      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/oPCjQs5e10ukxvyZsOIo/image.jpg"
+      image: "https://plain-eeur-prod-public.komododecks.com/202605/14/CkjdZLGSBwthYR5gjccj/image.jpg"
     },
     {
       id: "c2",
