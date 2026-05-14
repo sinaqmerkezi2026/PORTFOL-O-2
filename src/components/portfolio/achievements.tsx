@@ -11,7 +11,7 @@ export function Achievements() {
 
   const getIcon = (category: string) => {
     switch (category) {
-      case "Programming": return <Binary className="w-8 h-8 md:w-10 md:h-10" />;
+      case "Programming": return <Code2 className="w-8 h-8 md:w-10 md:h-10" />;
       case "Hackathons": return <Code2 className="w-8 h-8 md:w-10 md:h-10" />;
       case "Making": return <Hammer className="w-8 h-8 md:w-10 md:h-10" />;
       case "Academic": return <School className="w-8 h-8 md:w-10 md:h-10" />;

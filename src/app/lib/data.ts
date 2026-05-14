@@ -80,11 +80,11 @@ export const portfolioData = {
     },
     {
       year: "2023",
-      title: "Respublika fənn olimpiadaları (RFO) 2023 Finalçı",
+      title: "Respublika Fənn Olimpiadaları - 2023",
       category: "Programming",
-      description: "National Subject Olympiad Finalist in Informatics (C++ Programming).",
+      description: "Respublika fənn olimpiadası informatika (C++) fənni üzrə Finalçı.",
       organization: "Ministry of Science and Education",
-      image: "https://picsum.photos/seed/rfo/600/400"
+      image: null
     },
     {
       year: "2023",
