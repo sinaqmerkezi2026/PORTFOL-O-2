@@ -69,7 +69,7 @@ export const portfolioData = {
       category: "Volunteer",
       description: "Successfully registered as a volunteer for the Formula 1 Azerbaijan Grand Prix, ready to contribute to one of the world's most prestigious sporting events.",
       organization: "Formula 1 | Baku City Circuit",
-      image: null
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOWh_D5oROwi74CY52KUaTUl7X_IgIHvrHfXwfvsBpQQ&s=10"
     },
     {
       year: "2025",
@@ -85,7 +85,7 @@ export const portfolioData = {
       category: "Hackathons",
       description: "Being the only school student among 1201 applicants. Registered participant for the upcoming official Baku Metro hackathon focusing on innovative transit and infrastructure solutions (May 1-3, 2026).",
       organization: "\"Bakı Metropoliteni\" QSC",
-      image: "https://media.licdn.com/dms/image/v2/D4D22AQFi-FQC57HO3A/feedshare-image-high-res/B4DZ3vX6drI0AU-/0/1777837517139?e=1780531200&v=beta&t=NgL-6WfHLu1vNCKB9rb7Y9Gmpxv4M5ThLQ2HZuQeGSw"
+      image: "https://media.licdn.com/dms/image/v2/D4D22AQFi-FQC57HO3A/feedshare-image-high-res/B4DZ3vX6drI0AU-/0/1777837517139?e=1783555200&v=beta&t=qA5sDEwHBorgGeRpoOxS_DwRgs4qJcLmvMtVd5cVBQ8"
     },
     {
       year: "2025",
